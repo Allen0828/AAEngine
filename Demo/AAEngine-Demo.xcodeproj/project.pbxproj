@@ -12,7 +12,16 @@
 		9F1326A22BB27DD90000E108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1326A12BB27DD90000E108 /* Assets.xcassets */; };
 		9F1326A52BB27DD90000E108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1326A32BB27DD90000E108 /* Main.storyboard */; };
 		9F1326A72BB27DD90000E108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1326A62BB27DD90000E108 /* main.m */; };
-		9F1326B12BB27E9B0000E108 /* AAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1326B02BB27E9B0000E108 /* AAEngine.m */; };
+		9F201ED92BB3F71800BA818A /* AAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201ED82BB3F71800BA818A /* AAEngine.m */; };
+		9F201EDE2BB3FAAE00BA818A /* AAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EDD2BB3FAAE00BA818A /* AAModel.m */; };
+		9F201EE12BB594C700BA818A /* AAScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE02BB594C700BA818A /* AAScene.m */; };
+		9F201EE42BB59C3B00BA818A /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE32BB59C3B00BA818A /* AACamera.m */; };
+		9F201EE82BB6713F00BA818A /* AAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE72BB6713F00BA818A /* AAMath.m */; };
+		9F201EEE2BB6891600BA818A /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F201EEB2BB6891600BA818A /* plane.png */; };
+		9F201EEF2BB6891600BA818A /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F201EEC2BB6891600BA818A /* plane.obj */; };
+		9F201EF02BB6891600BA818A /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F201EED2BB6891600BA818A /* plane.mtl */; };
+		9F201EF22BB68A8C00BA818A /* AAAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EF12BB68A8C00BA818A /* AAAssetManager.m */; };
+		9F201EF52BB68D5A00BA818A /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EF42BB68D5A00BA818A /* Basic.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +34,22 @@
 		9F1326A42BB27DD90000E108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F1326A62BB27DD90000E108 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F1326A82BB27DD90000E108 /* AAEngine_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AAEngine_Demo.entitlements; sourceTree = "<group>"; };
-		9F1326AF2BB27E9B0000E108 /* AAEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAEngine.h; sourceTree = "<group>"; };
-		9F1326B02BB27E9B0000E108 /* AAEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAEngine.m; sourceTree = "<group>"; };
+		9F201ED62BB3F71800BA818A /* AAEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAEngine.h; sourceTree = "<group>"; };
+		9F201ED82BB3F71800BA818A /* AAEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAEngine.m; sourceTree = "<group>"; };
+		9F201EDB2BB3F7B300BA818A /* AAAssetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAssetManager.h; sourceTree = "<group>"; };
+		9F201EDC2BB3F94B00BA818A /* AAModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAModel.h; sourceTree = "<group>"; };
+		9F201EDD2BB3FAAE00BA818A /* AAModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAModel.m; sourceTree = "<group>"; };
+		9F201EDF2BB54B9400BA818A /* AAScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAScene.h; sourceTree = "<group>"; };
+		9F201EE02BB594C700BA818A /* AAScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAScene.m; sourceTree = "<group>"; };
+		9F201EE22BB59BC100BA818A /* AACamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACamera.h; sourceTree = "<group>"; };
+		9F201EE32BB59C3B00BA818A /* AACamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AACamera.m; sourceTree = "<group>"; };
+		9F201EE52BB59C8300BA818A /* AAMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAMath.h; sourceTree = "<group>"; };
+		9F201EE72BB6713F00BA818A /* AAMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAMath.m; sourceTree = "<group>"; };
+		9F201EEB2BB6891600BA818A /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		9F201EEC2BB6891600BA818A /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
+		9F201EED2BB6891600BA818A /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
+		9F201EF12BB68A8C00BA818A /* AAAssetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAssetManager.m; sourceTree = "<group>"; };
+		9F201EF42BB68D5A00BA818A /* Basic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Basic.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +82,8 @@
 		9F13269A2BB27DD70000E108 /* AAEngine-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				9F1326AE2BB27E790000E108 /* Sources */,
+				9F201EE92BB688DA00BA818A /* Resources */,
+				9F201ED42BB3F71800BA818A /* Source */,
 				9F13269B2BB27DD70000E108 /* AppDelegate.h */,
 				9F13269C2BB27DD70000E108 /* AppDelegate.m */,
 				9F13269E2BB27DD70000E108 /* ViewController.h */,
@@ -72,14 +96,75 @@
 			path = "AAEngine-Demo";
 			sourceTree = "<group>";
 		};
-		9F1326AE2BB27E790000E108 /* Sources */ = {
+		9F201ED42BB3F71800BA818A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9F1326AF2BB27E9B0000E108 /* AAEngine.h */,
-				9F1326B02BB27E9B0000E108 /* AAEngine.m */,
+				9F201ED52BB3F71800BA818A /* AAEngine */,
+				9F201ED72BB3F71800BA818A /* private */,
 			);
-			name = Sources;
-			path = ../../Sources;
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		9F201ED52BB3F71800BA818A /* AAEngine */ = {
+			isa = PBXGroup;
+			children = (
+				9F201ED62BB3F71800BA818A /* AAEngine.h */,
+				9F201EDB2BB3F7B300BA818A /* AAAssetManager.h */,
+				9F201EDC2BB3F94B00BA818A /* AAModel.h */,
+				9F201EDF2BB54B9400BA818A /* AAScene.h */,
+				9F201EE22BB59BC100BA818A /* AACamera.h */,
+				9F201EE52BB59C8300BA818A /* AAMath.h */,
+			);
+			path = AAEngine;
+			sourceTree = "<group>";
+		};
+		9F201ED72BB3F71800BA818A /* private */ = {
+			isa = PBXGroup;
+			children = (
+				9F201EF32BB68D2700BA818A /* Shaders */,
+				9F201EE62BB6712300BA818A /* Math */,
+				9F201ED82BB3F71800BA818A /* AAEngine.m */,
+				9F201EDD2BB3FAAE00BA818A /* AAModel.m */,
+				9F201EE02BB594C700BA818A /* AAScene.m */,
+				9F201EE32BB59C3B00BA818A /* AACamera.m */,
+				9F201EF12BB68A8C00BA818A /* AAAssetManager.m */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		9F201EE62BB6712300BA818A /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				9F201EE72BB6713F00BA818A /* AAMath.m */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		9F201EE92BB688DA00BA818A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F201EEA2BB6891600BA818A /* plane */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9F201EEA2BB6891600BA818A /* plane */ = {
+			isa = PBXGroup;
+			children = (
+				9F201EEB2BB6891600BA818A /* plane.png */,
+				9F201EEC2BB6891600BA818A /* plane.obj */,
+				9F201EED2BB6891600BA818A /* plane.mtl */,
+			);
+			path = plane;
+			sourceTree = "<group>";
+		};
+		9F201EF32BB68D2700BA818A /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				9F201EF42BB68D5A00BA818A /* Basic.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +226,9 @@
 			files = (
 				9F1326A22BB27DD90000E108 /* Assets.xcassets in Resources */,
 				9F1326A52BB27DD90000E108 /* Main.storyboard in Resources */,
+				9F201EF02BB6891600BA818A /* plane.mtl in Resources */,
+				9F201EEF2BB6891600BA818A /* plane.obj in Resources */,
+				9F201EEE2BB6891600BA818A /* plane.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +240,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1326A02BB27DD70000E108 /* ViewController.m in Sources */,
-				9F1326B12BB27E9B0000E108 /* AAEngine.m in Sources */,
+				9F201EE42BB59C3B00BA818A /* AACamera.m in Sources */,
+				9F201EF52BB68D5A00BA818A /* Basic.metal in Sources */,
+				9F201EDE2BB3FAAE00BA818A /* AAModel.m in Sources */,
+				9F201EF22BB68A8C00BA818A /* AAAssetManager.m in Sources */,
+				9F201ED92BB3F71800BA818A /* AAEngine.m in Sources */,
 				9F1326A72BB27DD90000E108 /* main.m in Sources */,
+				9F201EE12BB594C700BA818A /* AAScene.m in Sources */,
 				9F13269D2BB27DD70000E108 /* AppDelegate.m in Sources */,
+				9F201EE82BB6713F00BA818A /* AAMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

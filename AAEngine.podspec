@@ -31,7 +31,7 @@ AAEngine is a powerful OC library used to display 3D models and 3D interactions 
   s.ios.deployment_target = '12.0'
   s.osx.deployment_target = '10.15'
 
-  s.source_files = 'Source/**/*.{h,mm}'
+  s.source_files = 'Source/**/*'
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
