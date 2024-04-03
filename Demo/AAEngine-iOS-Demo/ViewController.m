@@ -30,11 +30,7 @@
     self.engine = [AAEngine createWith:layer];
     
     AAModel *model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
-    AACamera *camera = [AACamera new];
-    camera.pos = simd_make_float3(-1.0, 1.5, -1);
-    camera.rot = simd_make_float3(-0.5, 13.0, 0.0);
     AAScene *scene = [[AAScene alloc] init];
-    scene.camera = camera;
     [scene addChild:model];
     [self.engine loadScene:scene];
     

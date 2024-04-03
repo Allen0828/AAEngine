@@ -46,12 +46,22 @@
     NSError *error = NULL;
     id<MTLLibrary> library;
 #if TARGET_OS_IPHONE
+#if AAENGINE_ENABLE_SPM
     NSString *file = [[NSBundle mainBundle] pathForResource:@"AAEngine_AAEngine" ofType:@"bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:file];
     library = [engine.device newDefaultLibraryWithBundle:bundle error:&error];
 #else
+    NSBundle *bundle = [NSBundle bundleForClass:[AAEngine class]];
+    library = [engine.device newDefaultLibraryWithBundle:bundle error:&error];
+#endif
+    
+#else
     library = [engine.device newDefaultLibrary];
 #endif
+    if (error) {
+        NSLog(@"Failed to created library, error %@", error);
+        return nil;
+    }
     id <MTLFunction> vertexFunction = [library newFunctionWithName:@"test_vertex"];
     id <MTLFunction> fragmentFunction = [library newFunctionWithName:@"test_fragment"];
     MTLRenderPipelineDescriptor *pipelineStateDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
@@ -65,7 +75,6 @@
     if (error) {
         NSLog(@"Failed to created pipeline state, error %@", error);
     }
-    
     return engine;
 }
 

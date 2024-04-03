@@ -46,7 +46,8 @@
 
 
 - (void)addChild:(AAModel*)child {
-    [self.m_models addObject:child];
+    if (child)
+        [self.m_models addObject:child];
 }
 - (void)removeChild:(AAModel*)child {
     [self.m_models removeObject:child];
