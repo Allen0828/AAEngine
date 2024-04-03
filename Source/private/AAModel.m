@@ -61,20 +61,29 @@
 - (id<MTLTexture>)loadTexture:(NSString*)imgName {
     id<MTLTexture> uv;
     MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:MTLCreateSystemDefaultDevice()];
-#if TARGET_OS_IPHONE
-    UIImage *img = [UIImage imageNamed:imgName];
-    uv = [textureLoader newTextureWithCGImage:img.CGImage options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
-#else
     NSString *suffix = [NSURL fileURLWithPath:imgName].pathExtension.length > 0 ? nil : @"png";
-    if ([[NSBundle mainBundle] pathForResource:imgName ofType:suffix] == nil) {
-        NSLog(@"error: %@ is not found", imgName);
-        return nil;
-    }
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:imgName ofType:suffix]];
-    NSError *error;
-    uv = [textureLoader newTextureWithContentsOfURL:url options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
     
+    NSError *error;
+    if ([[NSBundle mainBundle] pathForResource:imgName ofType:suffix] == nil) {
+        NSLog(@"error: %@ is not found, Please check if there are any files in the project. If so, please check if the format is supported", imgName);
+        // Assets.xcassets
+        CGImageRef cg_img;
+#if TARGET_OS_IPHONE
+        cg_img = [UIImage imageNamed:imgName].CGImage;
+#else
+        NSImage *img = [NSImage imageNamed:@""];
+        CGImageSourceRef ref = CGImageSourceCreateWithData((CFDataRef)img.TIFFRepresentation, nil);
+        cg_img = CGImageSourceCreateImageAtIndex(ref, 0, nil);
 #endif
+        if (cg_img == nil) {
+            NSLog(@"error: %@ is not found with Assets.xcassets", imgName);
+            return nil;
+        }
+        uv = [textureLoader newTextureWithCGImage:cg_img options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
+    } else {
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:imgName ofType:suffix]];
+        uv = [textureLoader newTextureWithContentsOfURL:url options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
+    }
     if(error || uv == nil) {
         NSLog(@"Error creating texture %@", error.localizedDescription);
         return nil;

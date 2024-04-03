@@ -13,26 +13,12 @@
 #import "AAScene.h"
 #import "AAAssetManager.h"
 
-//NSString *shader = @"\
-//#include <metal_stdlib> \
-//\n\
-//using namespace metal;\
-//vertex float4 triangleVertex(constant float4* vertices [[buffer(0)]], uint vid [[vertex_id]]) {\
-//    return vertices[vid];\
-//}\
-//fragment float4 triangleFragment() {\
-//    return float4(0,0,0,1);\
-//}";
 
-
-
-
-typedef struct
-{
-    vector_float4 pos;   // X Y Z W
-} TriangleVertex;
 
 @interface AAEngine ()
+{
+    MTLClearColor _color;
+}
 
 @property (nonatomic,strong) CAMetalLayer *mLayer;
 
@@ -56,7 +42,7 @@ typedef struct
     if (layer.pixelFormat) {
         // MTLPixelFormatBGRA8Unorm_sRGB
     }
-    
+
     NSError *error = NULL;
     id<MTLLibrary> library;
 #if TARGET_OS_IPHONE
@@ -83,6 +69,13 @@ typedef struct
     return engine;
 }
 
+- (instancetype)init {
+    if (self=[super init]) {
+        _color = MTLClearColorMake(135/255.0, 206/255.0, 250/255.0, 1);
+    }
+    return self;
+}
+
 - (void)loadScene:(AAScene*)scene {
     self.scene = scene;
 }
@@ -98,7 +91,9 @@ typedef struct
     MTLRenderPassDescriptor *renderPassDescriptor = [MTLRenderPassDescriptor new];
     renderPassDescriptor.colorAttachments[0].texture = drawable.texture;
     renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
-    renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(1, 0, 0, 1);
+//    self.mLayer.backgroundColor
+    
+    renderPassDescriptor.colorAttachments[0].clearColor = _color;
     
     
     if (renderPassDescriptor != nil) {
@@ -113,5 +108,10 @@ typedef struct
     [commandBuffer commit];
 }
 
+- (void)setClearColorWithRed:(int)red green:(int)green blue:(int)blue alpha:(int)alpha {
+    _color = MTLClearColorMake(red/255.0, green/255.0, blue/255.0, alpha);
+}
+
 
 @end
+

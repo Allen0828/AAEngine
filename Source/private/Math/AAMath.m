@@ -107,15 +107,12 @@ simd_float4x4 translationMatrix(float x, float y, float z) {
     };
 }
 simd_float4x4 inverseTranslationMatrix(float x, float y, float z) {
-    // 创建平移矩阵
     simd_float4x4 translationMatrix = (simd_float4x4){
         .columns[0] = {1.0, 0.0, 0.0, 0.0},
         .columns[1] = {0.0, 1.0, 0.0, 0.0},
         .columns[2] = {0.0, 0.0, 1.0, 0.0},
         .columns[3] = {x, y, z, 1.0}
     };
-    
-    // 计算逆矩阵
     simd_float4x4 inverseMatrix = simd_inverse(translationMatrix);
     return inverseMatrix;
 }
@@ -189,67 +186,3 @@ simd_float4x4 modelMatrix(Transform transform) {
 }
 
 
-
-
-/*
-
-
- // MARK: - Orthographic matrix
- init(orthographic rect: CGRect, near: Float, far: Float) {
-   let left = Float(rect.origin.x)
-   let right = Float(rect.origin.x + rect.width)
-   let top = Float(rect.origin.y)
-   let bottom = Float(rect.origin.y - rect.height)
-   let X = float4(2 / (right - left), 0, 0, 0)
-   let Y = float4(0, 2 / (top - bottom), 0, 0)
-   let Z = float4(0, 0, 1 / (far - near), 0)
-   let W = float4(
-     (left + right) / (left - right),
-     (top + bottom) / (bottom - top),
-     near / (near - far),
-     1)
-   self.init()
-   columns = (X, Y, Z, W)
- }
-
- // convert double4x4 to float4x4
- init(_ m: matrix_double4x4) {
-   self.init()
-   let matrix = float4x4(
-     float4(m.columns.0),
-     float4(m.columns.1),
-     float4(m.columns.2),
-     float4(m.columns.3))
-   self = matrix
- }
-}
-
-// MARK: - float3x3
-extension float3x3 {
- init(normalFrom4x4 matrix: float4x4) {
-   self.init()
-   columns = matrix.upperLeft.inverse.transpose.columns
- }
-}
-
-// MARK: - float4
-extension float4 {
- var xyz: float3 {
-   get {
-     float3(x, y, z)
-   }
-   set {
-     x = newValue.x
-     y = newValue.y
-     z = newValue.z
-   }
- }
-
- // convert from double4
- init(_ d: SIMD4<Double>) {
-   self.init()
-   self = [Float(d.x), Float(d.y), Float(d.z), Float(d.w)]
- }
-}
-
- */

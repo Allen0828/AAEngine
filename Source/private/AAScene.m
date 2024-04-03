@@ -26,19 +26,24 @@
 
 @implementation AAScene
 
+- (AACamera *)camera {
+    if (_camera == nil)
+        return _defaultCamera;
+    return _camera;
+}
+
 - (instancetype)init {
     if (self=[super init]) {
         self.m_models = [NSMutableArray array];
+        
+        // create default camera
+        _defaultCamera = [AACamera new];
+        _defaultCamera.pos = simd_make_float3(-1.0, 1.5, -1);
+        _defaultCamera.rot = simd_make_float3(-0.5, 13.0, 0.0);
     }
     return self;
 }
 
-//- (void)setCamera:(AACamera*)camera {
-//    
-//}
-//- (AACamera*)getCamera {
-//    
-//}
 
 - (void)addChild:(AAModel*)child {
     [self.m_models addObject:child];

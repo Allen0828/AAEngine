@@ -14,6 +14,9 @@
 
 @interface ViewController ()
 {
+    float minDistance;
+    float maxDistance;
+    float distance;
     NSTimer* mainLoopTimer;
 }
 @property (nonatomic,strong) AAEngine *engine;
@@ -24,28 +27,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    minDistance = 0.0;
+    maxDistance = 20;
+    distance = 2.5;
     
     
     CAMetalLayer *layer = [CAMetalLayer layer];
     layer.frame = CGRectMake(0, 0, 300, 300);
-    layer.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1.0);
     layer.pixelFormat = MTLPixelFormatBGRA8Unorm_sRGB;
-//    [self.view.layer addSublayer:layer];
     self.view.layer = layer;
     self.engine = [AAEngine createWith:layer];
     
+    
     AAModel *model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
-    AACamera *camera = [AACamera new];
-    camera.pos = simd_make_float3(-1.0, 1.5, -1);
-    camera.rot = simd_make_float3(-0.5, 13.0, 0.0);
     AAScene *scene = [[AAScene alloc] init];
-    scene.camera = camera;
     [scene addChild:model];
     
     [self.engine loadScene:scene];
     // ios use CADisplayLink
     mainLoopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30) target:self selector:@selector(render) userInfo:nil repeats:YES];
-    
 }
 
 - (void)render {
@@ -69,22 +69,37 @@
     }];
 }
 
+- (void)scrollWheel:(NSEvent *)event {
+    NSLog(@"%.2f -- %.2f", event.deltaX, event.deltaY);
+    [self sceneScroll:event.deltaX deltaY:event.deltaY];
+}
+- (void)mouseDragged:(NSEvent *)event {
+    NSLog(@"%.2f -- %.2f", event.deltaX, event.deltaY);
+    [self sceneMove:event.deltaX deltaY:event.deltaY];
+}
+- (void)mouseDown:(NSEvent *)event {
+//    InputController *input = [InputController shareInstance];
+//    input->leftMouseDown = true;
+}
+- (void)mouseUp:(NSEvent *)event {
+//    InputController *input = [InputController shareInstance];
+//    input->leftMouseDown = false;
+}
+
 - (void)keyDown:(NSEvent*)event {
-    NSLog(@"%d", event.keyCode);
-    simd_float3 pos = [self.engine getCurrentScene].camera.pos;
     unsigned short code = event.keyCode;
     switch (code) {
-        case 13:
-            [self.engine getCurrentScene].camera.pos = simd_make_float3(pos.x, pos.y, pos.z + 0.002);
+        case 13: //w
+            [self sceneScroll:0.0 deltaY:1.0];
             break;
-        case 0:
-            [self.engine getCurrentScene].camera.pos = simd_make_float3(pos.x+0.02, pos.yz);
+        case 0: //a
+            [self sceneMove:0.0 deltaY:-1.0];
             break;
-        case 1:
-            [self.engine getCurrentScene].camera.pos = simd_make_float3(pos.x-0.02, pos.yz);
+        case 1: //s
+            [self sceneScroll:0.0 deltaY:-1.0];
             break;
-        case 2:
-            [self.engine getCurrentScene].camera.pos = simd_make_float3(pos.x, pos.y, pos.z - 0.002);
+        case 2://d
+            [self sceneMove:0.0 deltaY:1.0];
             break;
             
         default:
@@ -92,5 +107,31 @@
     }
 }
 
+- (void)sceneScroll:(CGFloat)x deltaY:(CGFloat)y {
+    distance -= (x + y) * 0.1;
+    distance = MIN(maxDistance, distance);
+    distance = MAX(minDistance, distance);
+    
+    simd_float3 rot = [self.engine getCurrentScene].camera.rot;
+    simd_float4x4 rotateMatrix = rotationYXZ(-rot.x, rot.y, 0);
+    simd_float4 distanceVector = simd_make_float4(0, 0, -distance, 0);
+    simd_float4 rotatedVector = matrix_multiply(rotateMatrix, distanceVector);
+
+    [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
+}
+
+- (void)sceneMove:(CGFloat)x deltaY:(CGFloat)y {
+    simd_float3 rot = [self.engine getCurrentScene].camera.rot;
+    rot.x += x * 0.01;
+    rot.y += y * 0.01;
+    rot.x = MAX(-M_PI/2.0, MIN(rot.x, M_PI/2.0));
+    [self.engine getCurrentScene].camera.rot = rot;
+    
+    simd_float4x4 rotateMatrix = rotationYXZ(-rot.x, rot.y, 0);
+    simd_float4 distanceVector = simd_make_float4(0, 0, -distance, 0);
+    simd_float4 rotatedVector = matrix_multiply(rotateMatrix, distanceVector);
+    
+    [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
+}
 
 @end

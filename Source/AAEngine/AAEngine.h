@@ -9,6 +9,7 @@
 
 @class CAMetalLayer;
 @class AAScene;
+struct MTLClearColor;
 
 @interface AAEngine : NSObject
 
@@ -16,6 +17,11 @@
 
 - (void)loadScene:(AAScene*)scene;
 - (AAScene*)getCurrentScene;
+
+// rgb[0-255] alpha [0-1]   default 135 206 250 1
+- (void)setClearColorWithRed:(int)red green:(int)green blue:(int)blue alpha:(int)alpha;
+
+//- (void)setClearColor:(MTLClearColor)color;
 
 - (void)renderer;
 
