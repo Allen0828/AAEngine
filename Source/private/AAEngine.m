@@ -46,15 +46,14 @@
     NSError *error = NULL;
     id<MTLLibrary> library;
 #if TARGET_OS_IPHONE
-#if AAENGINE_ENABLE_SPM
     NSString *file = [[NSBundle mainBundle] pathForResource:@"AAEngine_AAEngine" ofType:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:file];
-    library = [engine.device newDefaultLibraryWithBundle:bundle error:&error];
-#else
-    NSBundle *bundle = [NSBundle bundleForClass:[AAEngine class]];
-    library = [engine.device newDefaultLibraryWithBundle:bundle error:&error];
-#endif
-    
+    if (file) {
+        NSBundle *bundle = [NSBundle bundleWithPath:file];
+        library = [engine.device newDefaultLibraryWithBundle:bundle error:&error];
+    } else {
+        NSBundle *bundle = [NSBundle bundleForClass:[AAEngine class]];
+        library = [engine.device newDefaultLibraryWithBundle:bundle error:&error];
+    }
 #else
     library = [engine.device newDefaultLibrary];
 #endif
@@ -100,8 +99,6 @@
     MTLRenderPassDescriptor *renderPassDescriptor = [MTLRenderPassDescriptor new];
     renderPassDescriptor.colorAttachments[0].texture = drawable.texture;
     renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
-//    self.mLayer.backgroundColor
-    
     renderPassDescriptor.colorAttachments[0].clearColor = _color;
     
     
