@@ -17,11 +17,28 @@
 		9F201EE12BB594C700BA818A /* AAScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE02BB594C700BA818A /* AAScene.m */; };
 		9F201EE42BB59C3B00BA818A /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE32BB59C3B00BA818A /* AACamera.m */; };
 		9F201EE82BB6713F00BA818A /* AAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE72BB6713F00BA818A /* AAMath.m */; };
-		9F201EEE2BB6891600BA818A /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F201EEB2BB6891600BA818A /* plane.png */; };
-		9F201EEF2BB6891600BA818A /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F201EEC2BB6891600BA818A /* plane.obj */; };
-		9F201EF02BB6891600BA818A /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F201EED2BB6891600BA818A /* plane.mtl */; };
 		9F201EF22BB68A8C00BA818A /* AAAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EF12BB68A8C00BA818A /* AAAssetManager.m */; };
 		9F201EF52BB68D5A00BA818A /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EF42BB68D5A00BA818A /* Basic.metal */; };
+		9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F52BBD4FD500912FDB /* AppDelegate.m */; };
+		9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F82BBD4FD500912FDB /* SceneDelegate.m */; };
+		9F9032FC2BBD4FD500912FDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032FB2BBD4FD500912FDB /* ViewController.m */; };
+		9F9032FF2BBD4FD500912FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9032FD2BBD4FD500912FDB /* Main.storyboard */; };
+		9F9033012BBD4FD700912FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033002BBD4FD700912FDB /* Assets.xcassets */; };
+		9F9033042BBD4FD700912FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033022BBD4FD700912FDB /* LaunchScreen.storyboard */; };
+		9F9033072BBD4FD700912FDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9033062BBD4FD700912FDB /* main.m */; };
+		9F90330B2BBD4FF200912FDB /* AAAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EF12BB68A8C00BA818A /* AAAssetManager.m */; };
+		9F90330C2BBD4FF500912FDB /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE32BB59C3B00BA818A /* AACamera.m */; };
+		9F90330D2BBD4FF700912FDB /* AAScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE02BB594C700BA818A /* AAScene.m */; };
+		9F90330E2BBD4FFA00912FDB /* AAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EDD2BB3FAAE00BA818A /* AAModel.m */; };
+		9F90330F2BBD4FFC00912FDB /* AAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201ED82BB3F71800BA818A /* AAEngine.m */; };
+		9F9033102BBD4FFF00912FDB /* AAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EE72BB6713F00BA818A /* AAMath.m */; };
+		9F9033112BBD500200912FDB /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F201EF42BB68D5A00BA818A /* Basic.metal */; };
+		9F9033172BBD515E00912FDB /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033142BBD515E00912FDB /* plane.png */; };
+		9F9033182BBD515E00912FDB /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033142BBD515E00912FDB /* plane.png */; };
+		9F9033192BBD515E00912FDB /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033152BBD515E00912FDB /* plane.obj */; };
+		9F90331A2BBD515E00912FDB /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033152BBD515E00912FDB /* plane.obj */; };
+		9F90331B2BBD515E00912FDB /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033162BBD515E00912FDB /* plane.mtl */; };
+		9F90331C2BBD515E00912FDB /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F9033162BBD515E00912FDB /* plane.mtl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,15 +62,34 @@
 		9F201EE32BB59C3B00BA818A /* AACamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AACamera.m; sourceTree = "<group>"; };
 		9F201EE52BB59C8300BA818A /* AAMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAMath.h; sourceTree = "<group>"; };
 		9F201EE72BB6713F00BA818A /* AAMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAMath.m; sourceTree = "<group>"; };
-		9F201EEB2BB6891600BA818A /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
-		9F201EEC2BB6891600BA818A /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
-		9F201EED2BB6891600BA818A /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
 		9F201EF12BB68A8C00BA818A /* AAAssetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAssetManager.m; sourceTree = "<group>"; };
 		9F201EF42BB68D5A00BA818A /* Basic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Basic.metal; sourceTree = "<group>"; };
+		9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AAEngine-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F9032F42BBD4FD500912FDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F9032F52BBD4FD500912FDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F9032F72BBD4FD500912FDB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		9F9032F82BBD4FD500912FDB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		9F9032FA2BBD4FD500912FDB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9F9032FB2BBD4FD500912FDB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F9032FE2BBD4FD500912FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F9033002BBD4FD700912FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F9033032BBD4FD700912FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F9033052BBD4FD700912FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9033062BBD4FD700912FDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F9033142BBD515E00912FDB /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		9F9033152BBD515E00912FDB /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
+		9F9033162BBD515E00912FDB /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9F1326952BB27DD70000E108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9032EF2BBD4FD500912FDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,7 +102,10 @@
 		9F13268F2BB27DD70000E108 = {
 			isa = PBXGroup;
 			children = (
+				9F9033122BBD515E00912FDB /* Resources */,
+				9F201ED42BB3F71800BA818A /* Source */,
 				9F13269A2BB27DD70000E108 /* AAEngine-Demo */,
+				9F9032F32BBD4FD500912FDB /* AAEngine-iOS-Demo */,
 				9F1326992BB27DD70000E108 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				9F1326982BB27DD70000E108 /* AAEngine-Demo.app */,
+				9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,8 +122,6 @@
 		9F13269A2BB27DD70000E108 /* AAEngine-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				9F201EE92BB688DA00BA818A /* Resources */,
-				9F201ED42BB3F71800BA818A /* Source */,
 				9F13269B2BB27DD70000E108 /* AppDelegate.h */,
 				9F13269C2BB27DD70000E108 /* AppDelegate.m */,
 				9F13269E2BB27DD70000E108 /* ViewController.h */,
@@ -102,8 +140,7 @@
 				9F201ED52BB3F71800BA818A /* AAEngine */,
 				9F201ED72BB3F71800BA818A /* private */,
 			);
-			name = Source;
-			path = ../../Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		9F201ED52BB3F71800BA818A /* AAEngine */ = {
@@ -141,30 +178,48 @@
 			path = Math;
 			sourceTree = "<group>";
 		};
-		9F201EE92BB688DA00BA818A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9F201EEA2BB6891600BA818A /* plane */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		9F201EEA2BB6891600BA818A /* plane */ = {
-			isa = PBXGroup;
-			children = (
-				9F201EEB2BB6891600BA818A /* plane.png */,
-				9F201EEC2BB6891600BA818A /* plane.obj */,
-				9F201EED2BB6891600BA818A /* plane.mtl */,
-			);
-			path = plane;
-			sourceTree = "<group>";
-		};
 		9F201EF32BB68D2700BA818A /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
 				9F201EF42BB68D5A00BA818A /* Basic.metal */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		9F9032F32BBD4FD500912FDB /* AAEngine-iOS-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				9F9032F42BBD4FD500912FDB /* AppDelegate.h */,
+				9F9032F52BBD4FD500912FDB /* AppDelegate.m */,
+				9F9032F72BBD4FD500912FDB /* SceneDelegate.h */,
+				9F9032F82BBD4FD500912FDB /* SceneDelegate.m */,
+				9F9032FA2BBD4FD500912FDB /* ViewController.h */,
+				9F9032FB2BBD4FD500912FDB /* ViewController.m */,
+				9F9032FD2BBD4FD500912FDB /* Main.storyboard */,
+				9F9033002BBD4FD700912FDB /* Assets.xcassets */,
+				9F9033022BBD4FD700912FDB /* LaunchScreen.storyboard */,
+				9F9033052BBD4FD700912FDB /* Info.plist */,
+				9F9033062BBD4FD700912FDB /* main.m */,
+			);
+			path = "AAEngine-iOS-Demo";
+			sourceTree = "<group>";
+		};
+		9F9033122BBD515E00912FDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F9033132BBD515E00912FDB /* plane */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9F9033132BBD515E00912FDB /* plane */ = {
+			isa = PBXGroup;
+			children = (
+				9F9033142BBD515E00912FDB /* plane.png */,
+				9F9033152BBD515E00912FDB /* plane.obj */,
+				9F9033162BBD515E00912FDB /* plane.mtl */,
+			);
+			path = plane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +242,23 @@
 			productReference = 9F1326982BB27DD70000E108 /* AAEngine-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9F9032F12BBD4FD500912FDB /* AAEngine-iOS-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F90330A2BBD4FD700912FDB /* Build configuration list for PBXNativeTarget "AAEngine-iOS-Demo" */;
+			buildPhases = (
+				9F9032EE2BBD4FD500912FDB /* Sources */,
+				9F9032EF2BBD4FD500912FDB /* Frameworks */,
+				9F9032F02BBD4FD500912FDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AAEngine-iOS-Demo";
+			productName = "AAEngine-iOS-Demo";
+			productReference = 9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +269,9 @@
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					9F1326972BB27DD70000E108 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					9F9032F12BBD4FD500912FDB = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -215,6 +290,7 @@
 			projectRoot = "";
 			targets = (
 				9F1326972BB27DD70000E108 /* AAEngine-Demo */,
+				9F9032F12BBD4FD500912FDB /* AAEngine-iOS-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -226,9 +302,22 @@
 			files = (
 				9F1326A22BB27DD90000E108 /* Assets.xcassets in Resources */,
 				9F1326A52BB27DD90000E108 /* Main.storyboard in Resources */,
-				9F201EF02BB6891600BA818A /* plane.mtl in Resources */,
-				9F201EEF2BB6891600BA818A /* plane.obj in Resources */,
-				9F201EEE2BB6891600BA818A /* plane.png in Resources */,
+				9F90331B2BBD515E00912FDB /* plane.mtl in Resources */,
+				9F9033192BBD515E00912FDB /* plane.obj in Resources */,
+				9F9033172BBD515E00912FDB /* plane.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9032F02BBD4FD500912FDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9033182BBD515E00912FDB /* plane.png in Resources */,
+				9F9033042BBD4FD700912FDB /* LaunchScreen.storyboard in Resources */,
+				9F90331C2BBD515E00912FDB /* plane.mtl in Resources */,
+				9F90331A2BBD515E00912FDB /* plane.obj in Resources */,
+				9F9033012BBD4FD700912FDB /* Assets.xcassets in Resources */,
+				9F9032FF2BBD4FD500912FDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +341,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F9032EE2BBD4FD500912FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F90330D2BBD4FF700912FDB /* AAScene.m in Sources */,
+				9F9032FC2BBD4FD500912FDB /* ViewController.m in Sources */,
+				9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */,
+				9F90330C2BBD4FF500912FDB /* AACamera.m in Sources */,
+				9F90330B2BBD4FF200912FDB /* AAAssetManager.m in Sources */,
+				9F9033072BBD4FD700912FDB /* main.m in Sources */,
+				9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */,
+				9F90330E2BBD4FFA00912FDB /* AAModel.m in Sources */,
+				9F90330F2BBD4FFC00912FDB /* AAEngine.m in Sources */,
+				9F9033102BBD4FFF00912FDB /* AAMath.m in Sources */,
+				9F9033112BBD500200912FDB /* Basic.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -261,6 +368,22 @@
 				9F1326A42BB27DD90000E108 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F9032FD2BBD4FD500912FDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F9032FE2BBD4FD500912FDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F9033022BBD4FD700912FDB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F9033032BBD4FD700912FDB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -429,6 +552,65 @@
 			};
 			name = Release;
 		};
+		9F9033082BBD4FD700912FDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AAEngine-iOS-Demo/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "allen0828.AAEngine-iOS-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F9033092BBD4FD700912FDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AAEngine-iOS-Demo/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "allen0828.AAEngine-iOS-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -446,6 +628,15 @@
 			buildConfigurations = (
 				9F1326AC2BB27DD90000E108 /* Debug */,
 				9F1326AD2BB27DD90000E108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F90330A2BBD4FD700912FDB /* Build configuration list for PBXNativeTarget "AAEngine-iOS-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9033082BBD4FD700912FDB /* Debug */,
+				9F9033092BBD4FD700912FDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

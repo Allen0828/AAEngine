@@ -21,6 +21,9 @@ let package = Package(
             resources:[
                 .process("private/Shaders")
             ],
-            publicHeadersPath: "AAEngine")
+            publicHeadersPath: "AAEngine", 
+            swiftSettings: [
+                .define("AAENGINE_ENABLE_SPM")
+            ])
     ]
 )
