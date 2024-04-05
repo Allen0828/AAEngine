@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@class AAModel;
+#import "AAModel.h"
+
 @class MDLVertexDescriptor;
 
 MDLVertexDescriptor* defaultLayout(void);

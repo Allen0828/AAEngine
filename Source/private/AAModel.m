@@ -8,10 +8,22 @@
 #import "AAModel.h"
 #import <MetalKit/MetalKit.h>
 
+
+typedef struct {
+  vector_float3 baseColor;
+  vector_float3 specularColor;
+  float roughness;
+  float metallic;
+  float ambientOcclusion;
+  float shininess;
+  float opacity;
+} Material;
+
 @interface AAModel ()
 {
     id<MTLTexture> baseColor;
     Transform transform;
+    Material _material;
 }
 
 @property (strong) MTKMesh *mesh;
@@ -105,6 +117,10 @@
         id<MTLTexture> texture = [textureLoader newTextureWithMDLTexture:mp.textureSamplerValue.texture options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
         return texture;
     }
+    if (mp.type == MDLMaterialPropertyTypeFloat3) {
+        NSLog(@"%.2f %.2f %.2f", mp.float3Value.x, mp.float3Value.y, mp.float3Value.z);
+        _material.baseColor = mp.float3Value;
+    }
     return nil;
 }
 
@@ -119,6 +135,7 @@
     
     [encoder setVertexBuffer:self.mesh.vertexBuffers[0].buffer offset:0 atIndex:VertexBuffer];
     [encoder setFragmentTexture:baseColor atIndex:BaseColor];
+    [encoder setFragmentBytes:&_material length:sizeof(_material) atIndex:13];
     for (int i=0; i<self.mesh.submeshes.count; i++) {
         MTKSubmesh *submesh = self.mesh.submeshes[i];
         [encoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle indexCount:submesh.indexCount indexType:submesh.indexType indexBuffer:submesh.indexBuffer.buffer indexBufferOffset:submesh.indexBuffer.offset];

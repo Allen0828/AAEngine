@@ -44,6 +44,16 @@ typedef struct {
     uint tiling;
 } Params;
 
+typedef struct {
+  vector_float3 baseColor;
+  vector_float3 specularColor;
+  float roughness;
+  float metallic;
+  float ambientOcclusion;
+  float shininess;
+  float opacity;
+} Material;
+
 struct VertexIn {
     float4 position [[attribute(Position)]];
     float3 normal [[attribute(Normal)]];
@@ -69,9 +79,13 @@ vertex VertexOut test_vertex(const VertexIn in [[stage_in]], constant Uniforms &
     return out;
 }
 
-fragment float4 test_fragment(VertexOut in [[stage_in]], constant Params &params [[buffer(ParamsBuffer)]], texture2d<float> baseColorTexture [[texture(BaseColor)]]) {
-    constexpr sampler textureSampler(filter::linear, mip_filter::linear, max_anisotropy(8), address::repeat);
-    float3 baseColor = baseColorTexture.sample(textureSampler, in.uv * params.tiling).rgb;
-    return float4(baseColor, 1);
+fragment float4 test_fragment(VertexOut in [[stage_in]], constant Params &params [[buffer(ParamsBuffer)]], texture2d<float> baseColorTexture [[texture(BaseColor)]], constant Material &_material [[buffer(13)]]) {
+    if (!is_null_texture(baseColorTexture)) {
+        constexpr sampler textureSampler(filter::linear, mip_filter::linear, max_anisotropy(8), address::repeat);
+        float3 baseColor = baseColorTexture.sample(textureSampler, in.uv * params.tiling).rgb;
+        return float4(baseColor, 1);
+    }
+
+    return float4(_material.baseColor, 1);
 }
 

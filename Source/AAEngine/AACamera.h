@@ -12,7 +12,7 @@
 
 @interface AACamera : NSObject
 
-/// 1
+/// 显示宽高比    
 @property (nonatomic,assign) CGFloat aspect;
 /// degreesToRadians(70)
 @property (nonatomic,assign) CGFloat fov;

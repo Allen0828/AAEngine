@@ -1,0 +1,922 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v5.0.4291569334)
+
+newmtl 20221121@floorMAT
+Kd 0.5000 0.3000 0.3000
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@ceilingMAT
+Kd 1 0.99504948 0.99504948
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@ceilingMAT
+Kd 1 0.99504948 0.99504948
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@ceilingMAT
+Kd 1 0.99504948 0.99504948
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@ceilingMAT
+Kd 1 0.99504948 0.99504948
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@baseboardMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetCMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetAMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetBMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetEMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@facetFMAT
+Ke 0 0 0
+d 1
+illum 1
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@floorMAT
+Ke 0 0 0
+d 1
+illum 1
+bump floorNormal-mipmap.ktx
+map_bump floorNormal-mipmap.ktx
+
+newmtl 20221121@windowglassMAT
+Ke 0 0 0
+d 0.1
+illum 1
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@windowglassMAT
+Ke 0 0 0
+d 0.1
+illum 1
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@windowglassMAT
+Ke 0 0 0
+d 0.1
+illum 1
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@windowglassMAT
+Ke 0 0 0
+d 0.1
+illum 1
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@windowglassMAT
+Ke 0 0 0
+d 0.1
+illum 1
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+
+newmtl 20221121@doormat
+Kd 0.90099013 0.90098113 0.90098113
+Ka 0 0 0
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 25
+illum 2
+

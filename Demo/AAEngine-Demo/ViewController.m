@@ -40,8 +40,11 @@
     
     
     AAModel *model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
+    AAModel *house_model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"house" ofType:@"obj"]];
+    house_model.scale = simd_make_float3(0.1);
     AAScene *scene = [[AAScene alloc] init];
     [scene addChild:model];
+    [scene addChild:house_model];
     
     [self.engine loadScene:scene];
     // ios use CADisplayLink

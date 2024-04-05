@@ -39,6 +39,12 @@
 		9F90333A2BBD530E00912FDB /* AAAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90332D2BBD530E00912FDB /* AAAssetManager.m */; };
 		9F90333B2BBD530E00912FDB /* AAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90332E2BBD530E00912FDB /* AAEngine.m */; };
 		9F90333C2BBD530E00912FDB /* AAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90332E2BBD530E00912FDB /* AAEngine.m */; };
+		9F90336E2BBFF88C00912FDB /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336B2BBFF88C00912FDB /* house.obj */; };
+		9F90336F2BBFF88C00912FDB /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336B2BBFF88C00912FDB /* house.obj */; };
+		9F9033702BBFF88C00912FDB /* floorNormal-mipmap.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336C2BBFF88C00912FDB /* floorNormal-mipmap.ktx */; };
+		9F9033712BBFF88C00912FDB /* floorNormal-mipmap.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336C2BBFF88C00912FDB /* floorNormal-mipmap.ktx */; };
+		9F9033722BBFF88C00912FDB /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336D2BBFF88C00912FDB /* house.mtl */; };
+		9F9033732BBFF88C00912FDB /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336D2BBFF88C00912FDB /* house.mtl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +85,9 @@
 		9F90332C2BBD530E00912FDB /* AACamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACamera.m; sourceTree = "<group>"; };
 		9F90332D2BBD530E00912FDB /* AAAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAAssetManager.m; sourceTree = "<group>"; };
 		9F90332E2BBD530E00912FDB /* AAEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAEngine.m; sourceTree = "<group>"; };
+		9F90336B2BBFF88C00912FDB /* house.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.obj; sourceTree = "<group>"; };
+		9F90336C2BBFF88C00912FDB /* floorNormal-mipmap.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "floorNormal-mipmap.ktx"; sourceTree = "<group>"; };
+		9F90336D2BBFF88C00912FDB /* house.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.mtl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +164,7 @@
 		9F9033122BBD515E00912FDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F90336A2BBFF88C00912FDB /* house */,
 				9F9033132BBD515E00912FDB /* plane */,
 			);
 			path = Resources;
@@ -221,6 +231,16 @@
 				9F90332B2BBD530E00912FDB /* Basic.metal */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		9F90336A2BBFF88C00912FDB /* house */ = {
+			isa = PBXGroup;
+			children = (
+				9F90336B2BBFF88C00912FDB /* house.obj */,
+				9F90336C2BBFF88C00912FDB /* floorNormal-mipmap.ktx */,
+				9F90336D2BBFF88C00912FDB /* house.mtl */,
+			);
+			path = house;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,11 +321,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9033722BBFF88C00912FDB /* house.mtl in Resources */,
 				9F1326A22BB27DD90000E108 /* Assets.xcassets in Resources */,
 				9F1326A52BB27DD90000E108 /* Main.storyboard in Resources */,
 				9F90331B2BBD515E00912FDB /* plane.mtl in Resources */,
 				9F9033192BBD515E00912FDB /* plane.obj in Resources */,
+				9F90336E2BBFF88C00912FDB /* house.obj in Resources */,
 				9F9033172BBD515E00912FDB /* plane.png in Resources */,
+				9F9033702BBFF88C00912FDB /* floorNormal-mipmap.ktx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,11 +337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9033182BBD515E00912FDB /* plane.png in Resources */,
+				9F9033732BBFF88C00912FDB /* house.mtl in Resources */,
 				9F9033042BBD4FD700912FDB /* LaunchScreen.storyboard in Resources */,
 				9F90331C2BBD515E00912FDB /* plane.mtl in Resources */,
 				9F90331A2BBD515E00912FDB /* plane.obj in Resources */,
 				9F9033012BBD4FD700912FDB /* Assets.xcassets in Resources */,
+				9F90336F2BBFF88C00912FDB /* house.obj in Resources */,
 				9F9032FF2BBD4FD500912FDB /* Main.storyboard in Resources */,
+				9F9033712BBFF88C00912FDB /* floorNormal-mipmap.ktx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

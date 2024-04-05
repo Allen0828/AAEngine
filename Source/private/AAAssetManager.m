@@ -6,7 +6,6 @@
 //
 
 #import "AAAssetManager.h"
-#import "AAModel.h"
 #import <MetalKit/MetalKit.h>
 #import <ModelIO/ModelIO.h>
 
@@ -47,7 +46,6 @@ MDLVertexDescriptor* defaultLayout(void) {
         NSLog(@"path is not found %@", path);
         return nil;
     }
-    NSError *error;
     MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:MTLCreateSystemDefaultDevice()];
     NSURL *url = [NSURL fileURLWithPath:path];
     MDLAsset *asset = [[MDLAsset alloc] initWithURL:url vertexDescriptor:defaultLayout() bufferAllocator:allocator];
