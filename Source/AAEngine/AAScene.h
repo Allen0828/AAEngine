@@ -17,6 +17,8 @@
 /// 如果当前scene 没有设置摄像机 则会使用默认摄像机
 @property (nonatomic,strong,readonly) AACamera *defaultCamera;
 @property (nonatomic,strong) AACamera *camera;
+/// 平行光
+/// Directional light
 
 
 - (void)addChild:(AAModel*)child;

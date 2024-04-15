@@ -8,26 +8,8 @@
 //#ifndef AAMath_h
 //#define AAMath_h
 #include <Foundation/Foundation.h>
-#include <simd/simd.h>
+#include "AACommon.h"
 
-
-typedef struct {
-    simd_float3 position;
-    simd_float3 rotation;
-    float scale;
-} Transform;
-
-typedef struct {
-    matrix_float4x4 modelMatrix;
-    matrix_float4x4 viewMatrix;
-    matrix_float4x4 projectionMatrix;
-} Uniforms;
-
-typedef struct {
-    uint width;
-    uint height;
-    uint tiling;
-} Params;
 
 #define radiansToDegrees(radians) ((radians / M_PI) * 180.0)
 #define degreesToRadians(degrees) ((degrees / 180.0) * M_PI)

@@ -40,8 +40,9 @@
     
     
     AAModel *model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
-    AAModel *house_model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"house" ofType:@"obj"]];
-    house_model.scale = simd_make_float3(0.1);
+    model.scale = simd_make_float3(5, 5, 5);
+    AAModel *house_model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"sponza" ofType:@"obj"]];
+    house_model.scale = simd_make_float3(0.001, 0.001, 0.001);
     AAScene *scene = [[AAScene alloc] init];
     [scene addChild:model];
     [scene addChild:house_model];
@@ -135,6 +136,15 @@
     simd_float4 rotatedVector = matrix_multiply(rotateMatrix, distanceVector);
     
     [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
+}
+
+- (float)getVertexX:(float)x {
+    float ratioX = 1.0 / self.view.frame.size.width;
+    return (2.0 *  x * ratioX) - 1.0;
+}
+- (float)getVertexY:(float)y {
+    float ratioY = 1.0 / self.view.frame.size.height;
+    return (2.0 * -y * ratioY) + 1.0;
 }
 
 @end

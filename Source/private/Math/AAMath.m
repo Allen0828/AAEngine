@@ -181,7 +181,7 @@ simd_float4x4 orthographic(CGRect rect, float near, float far) {
 simd_float4x4 modelMatrix(Transform transform) {
     simd_float4x4 pos = translation(transform.position.x, transform.position.y, transform.position.z);
     simd_float4x4 rot = rotation(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-    simd_float4x4 scale = scaling(transform.scale, transform.scale, transform.scale);
+    simd_float4x4 scale = scaling(transform.scale.x, transform.scale.y, transform.scale.z);
     return matrix_multiply(matrix_multiply(pos, rot), scale);
 }
 

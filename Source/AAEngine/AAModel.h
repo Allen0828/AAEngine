@@ -7,18 +7,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import "AAMath.h"
+#import "AACommon.h"
 
-typedef enum {
-  VertexBuffer = 0,
-  UVBuffer = 1,
-  UniformsBuffer = 11,
-  ParamsBuffer = 12
-} BufferIdx;
-
-typedef enum {
-  BaseColor = 0
-} TextureIndices;
 
 @class MDLMesh;
 @protocol MTLRenderCommandEncoder;
@@ -39,7 +29,7 @@ typedef enum {
 
 
 - (instancetype)initWithMDLMesh:(MDLMesh*)mdl_mesh;
-- (Transform)getTransform;
+
 - (void)renderWithEncoder:(id<MTLRenderCommandEncoder>)encoder vertexUniforms:(Uniforms)vertex andFragmentParams:(Params)fragment;
 
 
