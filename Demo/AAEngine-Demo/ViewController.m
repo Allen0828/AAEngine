@@ -12,7 +12,10 @@
 #import "AAScene.h"
 #import "AACamera.h"
 
-@interface ViewController ()
+#import "AARenderer.h"
+#import <MetalKit/MetalKit.h>
+
+@interface ViewController () <MTKViewDelegate>
 {
     float minDistance;
     float maxDistance;
@@ -21,35 +24,57 @@
 }
 @property (nonatomic,strong) AAEngine *engine;
 
+@property (strong) MTKView *mtkView;
+@property (strong) AARenderer *renderer;
+
 @end
 
 @implementation ViewController
 
+- (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size {
+    
+}
+
+- (void)drawInMTKView:(MTKView *)view {
+    [self.renderer render];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    minDistance = 0.0;
-    maxDistance = 20;
-    distance = 2.5;
+    
+    self.mtkView = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 600, 600)];
+    self.mtkView.device = MTLCreateSystemDefaultDevice();
+    self.mtkView.delegate = self;
+    self.mtkView.clearColor = MTLClearColorMake(1, 1, 1, 1);
+    [self.view addSubview:self.mtkView];
+    
+    self.renderer = [[AARenderer alloc] initWith:self.mtkView];
     
     
-    CAMetalLayer *layer = [CAMetalLayer layer];
-    layer.frame = CGRectMake(0, 0, 300, 300);
-    layer.pixelFormat = MTLPixelFormatBGRA8Unorm_sRGB;
-    self.view.layer = layer;
-    self.engine = [AAEngine createWith:layer];
     
-    
-    AAModel *model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
-    model.scale = simd_make_float3(5, 5, 5);
-    AAModel *house_model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"sponza" ofType:@"obj"]];
-    house_model.scale = simd_make_float3(0.001, 0.001, 0.001);
-    AAScene *scene = [[AAScene alloc] init];
-    [scene addChild:model];
-    [scene addChild:house_model];
-    
-    [self.engine loadScene:scene];
-    // ios use CADisplayLink
-    mainLoopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30) target:self selector:@selector(render) userInfo:nil repeats:YES];
+//    minDistance = 0.0;
+//    maxDistance = 20;
+//    distance = 2.5;
+//    
+//    
+//    CAMetalLayer *layer = [CAMetalLayer layer];
+//    layer.frame = CGRectMake(0, 0, 300, 300);
+//    layer.pixelFormat = MTLPixelFormatBGRA8Unorm_sRGB;
+//    self.view.layer = layer;
+//    self.engine = [AAEngine createWith:layer];
+//    
+//    
+//    AAModel *model = [AAModel modelWithFilePath:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]]; //[AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
+//    model.scale = simd_make_float3(5, 5, 5);
+//    AAModel *house_model = [AAModel modelWithFilePath:[[NSBundle mainBundle] pathForResource:@"house" ofType:@"obj"]]; //[AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"house" ofType:@"obj"]];
+////    house_model.scale = simd_make_float3(0.001, 0.001, 0.001);
+//    AAScene *scene = [[AAScene alloc] init];
+//    [scene addChild:model];
+//    [scene addChild:house_model];
+//    
+//    [self.engine loadScene:scene];
+//    // ios use CADisplayLink
+//    mainLoopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30) target:self selector:@selector(render) userInfo:nil repeats:YES];
 }
 
 - (void)render {

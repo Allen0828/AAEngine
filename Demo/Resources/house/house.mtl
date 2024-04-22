@@ -6,8 +6,8 @@ Kd 0.5000 0.3000 0.3000
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@ceilingMAT
 Kd 1 0.99504948 0.99504948
@@ -167,8 +167,8 @@ newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@ceilingMAT
 Kd 1 0.99504948 0.99504948
@@ -228,8 +228,8 @@ newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@ceilingMAT
 Kd 1 0.99504948 0.99504948
@@ -319,8 +319,8 @@ newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@ceilingMAT
 Kd 1 0.99504948 0.99504948
@@ -685,134 +685,134 @@ newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@floorMAT
 Ke 0 0 0
 d 1
 illum 1
-bump floorNormal-mipmap.ktx
-map_bump floorNormal-mipmap.ktx
+bump floorNormal-mipmap.png
+map_bump floorNormal-mipmap.png
 
 newmtl 20221121@windowglassMAT
 Ke 0 0 0

@@ -2,12 +2,10 @@
 //  AAMath.m
 //  AAEngine-Demo
 //
-//  Created by allen on 2024/3/29.
+//  Created by allen on 2024/4/22.
 //
 
 #import "AAMath.h"
-
-
 
 simd_float4x4 translation(float x, float y, float z) {
     return (simd_float4x4){
@@ -174,15 +172,4 @@ simd_float4x4 orthographic(CGRect rect, float near, float far) {
         .columns[3] = {(left + right) / (left - right), (top + bottom) / (bottom - top), near / (near - far), 1}
     };
 }
-
-
-
-
-simd_float4x4 modelMatrix(Transform transform) {
-    simd_float4x4 pos = translation(transform.position.x, transform.position.y, transform.position.z);
-    simd_float4x4 rot = rotation(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-    simd_float4x4 scale = scaling(transform.scale.x, transform.scale.y, transform.scale.z);
-    return matrix_multiply(matrix_multiply(pos, rot), scale);
-}
-
 
