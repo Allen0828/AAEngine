@@ -14,6 +14,12 @@
 		9F1326A72BB27DD90000E108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1326A62BB27DD90000E108 /* main.m */; };
 		9F6630BB2BD67C9E007DBAED /* dalihua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6630BA2BD67C9E007DBAED /* dalihua2.png */; };
 		9F6630BC2BD67C9E007DBAED /* dalihua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6630BA2BD67C9E007DBAED /* dalihua2.png */; };
+		9F6630C02BD75856007DBAED /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630BF2BD75856007DBAED /* AACamera.m */; };
+		9F6630C12BD75856007DBAED /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630BF2BD75856007DBAED /* AACamera.m */; };
+		9F6630C52BD75BA6007DBAED /* AATransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C42BD75BA6007DBAED /* AATransform.m */; };
+		9F6630C62BD75BA6007DBAED /* AATransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C42BD75BA6007DBAED /* AATransform.m */; };
+		9F6630C92BD762CB007DBAED /* AAInputSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C82BD762CB007DBAED /* AAInputSystem.m */; };
+		9F6630CA2BD762CB007DBAED /* AAInputSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C82BD762CB007DBAED /* AAInputSystem.m */; };
 		9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F52BBD4FD500912FDB /* AppDelegate.m */; };
 		9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F82BBD4FD500912FDB /* SceneDelegate.m */; };
 		9F9032FC2BBD4FD500912FDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032FB2BBD4FD500912FDB /* ViewController.m */; };
@@ -31,6 +37,12 @@
 		9F90336F2BBFF88C00912FDB /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336B2BBFF88C00912FDB /* house.obj */; };
 		9F9033722BBFF88C00912FDB /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336D2BBFF88C00912FDB /* house.mtl */; };
 		9F9033732BBFF88C00912FDB /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 9F90336D2BBFF88C00912FDB /* house.mtl */; };
+		9FA7175E2BD8E5D000101E1F /* panorama_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA7175D2BD8E5D000101E1F /* panorama_2.jpg */; };
+		9FA7175F2BD8E5D000101E1F /* panorama_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA7175D2BD8E5D000101E1F /* panorama_2.jpg */; };
+		9FA717612BD8E5EB00101E1F /* panorama_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717602BD8E5EB00101E1F /* panorama_1.jpg */; };
+		9FA717622BD8E5EB00101E1F /* panorama_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717602BD8E5EB00101E1F /* panorama_1.jpg */; };
+		9FA717642BD8E78900101E1F /* panorama_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717632BD8E78900101E1F /* panorama_3.jpg */; };
+		9FA717652BD8E78900101E1F /* panorama_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717632BD8E78900101E1F /* panorama_3.jpg */; };
 		9FCCC65E2BD639610030D066 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC65D2BD6395E0030D066 /* Sphere.m */; };
 		9FCCC65F2BD639620030D066 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC65D2BD6395E0030D066 /* Sphere.m */; };
 		9FCCC6622BD63E190030D066 /* AARenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC6612BD63E190030D066 /* AARenderer.m */; };
@@ -56,6 +68,12 @@
 		9F1326A62BB27DD90000E108 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F1326A82BB27DD90000E108 /* AAEngine_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AAEngine_Demo.entitlements; sourceTree = "<group>"; };
 		9F6630BA2BD67C9E007DBAED /* dalihua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dalihua2.png; sourceTree = "<group>"; };
+		9F6630BE2BD75856007DBAED /* AACamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACamera.h; sourceTree = "<group>"; };
+		9F6630BF2BD75856007DBAED /* AACamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AACamera.m; sourceTree = "<group>"; };
+		9F6630C32BD75BA6007DBAED /* AATransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AATransform.h; sourceTree = "<group>"; };
+		9F6630C42BD75BA6007DBAED /* AATransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AATransform.m; sourceTree = "<group>"; };
+		9F6630C72BD762CB007DBAED /* AAInputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAInputSystem.h; sourceTree = "<group>"; };
+		9F6630C82BD762CB007DBAED /* AAInputSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAInputSystem.m; sourceTree = "<group>"; };
 		9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AAEngine-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9032F42BBD4FD500912FDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F9032F52BBD4FD500912FDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +91,9 @@
 		9F9033162BBD515E00912FDB /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.mtl; sourceTree = "<group>"; };
 		9F90336B2BBFF88C00912FDB /* house.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.obj; sourceTree = "<group>"; };
 		9F90336D2BBFF88C00912FDB /* house.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.mtl; sourceTree = "<group>"; };
+		9FA7175D2BD8E5D000101E1F /* panorama_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama_2.jpg; sourceTree = "<group>"; };
+		9FA717602BD8E5EB00101E1F /* panorama_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama_1.jpg; sourceTree = "<group>"; };
+		9FA717632BD8E78900101E1F /* panorama_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama_3.jpg; sourceTree = "<group>"; };
 		9FAEEF162BCE8DB90041C26B /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		9FCCC65C2BD6395E0030D066 /* Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
 		9FCCC65D2BD6395E0030D066 /* Sphere.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sphere.m; sourceTree = "<group>"; };
@@ -141,6 +162,24 @@
 			path = "AAEngine-Demo";
 			sourceTree = "<group>";
 		};
+		9F6630BD2BD75707007DBAED /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				9F6630BE2BD75856007DBAED /* AACamera.h */,
+				9F6630BF2BD75856007DBAED /* AACamera.m */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		9F6630C22BD75B89007DBAED /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				9F6630C32BD75BA6007DBAED /* AATransform.h */,
+				9F6630C42BD75BA6007DBAED /* AATransform.m */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		9F9032F32BBD4FD500912FDB /* AAEngine-iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +201,9 @@
 		9F9033122BBD515E00912FDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9FA717632BD8E78900101E1F /* panorama_3.jpg */,
+				9FA717602BD8E5EB00101E1F /* panorama_1.jpg */,
+				9FA7175D2BD8E5D000101E1F /* panorama_2.jpg */,
 				9F6630BA2BD67C9E007DBAED /* dalihua2.png */,
 				9F90336A2BBFF88C00912FDB /* house */,
 				9F9033132BBD515E00912FDB /* plane */,
@@ -192,6 +234,8 @@
 		9F90331E2BBD530E00912FDB /* AAEngine */ = {
 			isa = PBXGroup;
 			children = (
+				9F6630C22BD75B89007DBAED /* Basic */,
+				9F6630BD2BD75707007DBAED /* Camera */,
 				9FCCC66C2BD644560030D066 /* Geometry */,
 				9FCCC6682BD644180030D066 /* Tools */,
 				9FCCC65C2BD6395E0030D066 /* Sphere.h */,
@@ -250,6 +294,8 @@
 			children = (
 				9FCCC6692BD644340030D066 /* AAMath.h */,
 				9FCCC66A2BD644340030D066 /* AAMath.m */,
+				9F6630C72BD762CB007DBAED /* AAInputSystem.h */,
+				9F6630C82BD762CB007DBAED /* AAInputSystem.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -343,13 +389,16 @@
 			files = (
 				9F9033722BBFF88C00912FDB /* house.mtl in Resources */,
 				9F1326A22BB27DD90000E108 /* Assets.xcassets in Resources */,
+				9FA717642BD8E78900101E1F /* panorama_3.jpg in Resources */,
 				9F1326A52BB27DD90000E108 /* Main.storyboard in Resources */,
+				9FA717612BD8E5EB00101E1F /* panorama_1.jpg in Resources */,
 				9F90331B2BBD515E00912FDB /* plane.mtl in Resources */,
 				9F9033192BBD515E00912FDB /* plane.obj in Resources */,
 				9FF0A9152BCD065200E60D2F /* floorNormal-mipmap.png in Resources */,
 				9F6630BB2BD67C9E007DBAED /* dalihua2.png in Resources */,
 				9F90336E2BBFF88C00912FDB /* house.obj in Resources */,
 				9F9033172BBD515E00912FDB /* plane.png in Resources */,
+				9FA7175E2BD8E5D000101E1F /* panorama_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +410,14 @@
 				9FF0A9162BCD065200E60D2F /* floorNormal-mipmap.png in Resources */,
 				9F9033732BBFF88C00912FDB /* house.mtl in Resources */,
 				9F6630BC2BD67C9E007DBAED /* dalihua2.png in Resources */,
+				9FA717622BD8E5EB00101E1F /* panorama_1.jpg in Resources */,
 				9F9033042BBD4FD700912FDB /* LaunchScreen.storyboard in Resources */,
 				9F90331C2BBD515E00912FDB /* plane.mtl in Resources */,
 				9F90331A2BBD515E00912FDB /* plane.obj in Resources */,
 				9F9033012BBD4FD700912FDB /* Assets.xcassets in Resources */,
+				9FA7175F2BD8E5D000101E1F /* panorama_2.jpg in Resources */,
 				9F90336F2BBFF88C00912FDB /* house.obj in Resources */,
+				9FA717652BD8E78900101E1F /* panorama_3.jpg in Resources */,
 				9F9032FF2BBD4FD500912FDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +429,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6630C92BD762CB007DBAED /* AAInputSystem.m in Sources */,
+				9F6630C52BD75BA6007DBAED /* AATransform.m in Sources */,
 				9FCCC6622BD63E190030D066 /* AARenderer.m in Sources */,
 				9F1326A02BB27DD70000E108 /* ViewController.m in Sources */,
 				9FCCC65E2BD639610030D066 /* Sphere.m in Sources */,
@@ -385,6 +439,7 @@
 				9FCCC6652BD63EAB0030D066 /* AAPanoramaScene.m in Sources */,
 				9F13269D2BB27DD70000E108 /* AppDelegate.m in Sources */,
 				9FCCC66F2BD6446D0030D066 /* AASphere.m in Sources */,
+				9F6630C02BD75856007DBAED /* AACamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,11 +451,14 @@
 				9FCCC6672BD63EB20030D066 /* AARenderer.m in Sources */,
 				9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */,
 				9F9033072BBD4FD700912FDB /* main.m in Sources */,
+				9F6630C12BD75856007DBAED /* AACamera.m in Sources */,
+				9F6630CA2BD762CB007DBAED /* AAInputSystem.m in Sources */,
 				9FCCC6662BD63EAF0030D066 /* AAPanoramaScene.m in Sources */,
 				9FCCC6712BD64C3A0030D066 /* AAMath.m in Sources */,
 				9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */,
 				9FCCC6702BD64C170030D066 /* AASphere.m in Sources */,
 				9FCCC65F2BD639620030D066 /* Sphere.m in Sources */,
+				9F6630C62BD75BA6007DBAED /* AATransform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

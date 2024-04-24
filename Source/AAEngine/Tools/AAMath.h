@@ -15,13 +15,22 @@
 #define radiansToDegrees(radians) ((radians / M_PI) * 180.0)
 #define degreesToRadians(degrees) ((degrees / 180.0) * M_PI)
 
+simd_float4x4 Translation_float4x4(simd_float3 pos);
+simd_float4x4 translation(float x, float y, float z);
+
+simd_float4x4 Rotation_float4x4(simd_float3 rot);
+simd_float4x4 rotation(float angle_x, float angle_y, float angle_z);
+
+simd_float4x4 Scale_float4x4(simd_float3 scale);
+simd_float4x4 scaling(float x, float y, float z);
+
 
 simd_float3x3 getUpperLeft(simd_float4x4 matrix);
 simd_float3x3 normalFrom4x4(simd_float4x4 matrix);
 simd_float4x4 identity(void);
 
-simd_float4x4 translation(float x, float y, float z);
-simd_float4x4 scaling(float x, float y, float z);
+
+
 simd_float4x4 rotationMatrix_x(float angle);
 simd_float4x4 rotationMatrix_z(float angle);
 simd_float4x4 rotationMatrix_y(float angle);

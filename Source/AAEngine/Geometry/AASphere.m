@@ -27,7 +27,7 @@
         MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:MTLCreateSystemDefaultDevice()];
         MDLMesh *mdlMesh = [[MDLMesh alloc] initSphereWithExtent:simd_make_float3(radius, radius, radius) segments:simd_make_uint2(x, y) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
-//        MDLMesh *mdlMesh = [[MDLMesh alloc] initBoxWithExtent:simd_make_float3(0.75, 0.75, 0.75) segments:simd_make_uint3(1, 1, 1) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
+//        MDLMesh *mdlMesh = [[MDLMesh alloc] initBoxWithExtent:simd_make_float3(1.75, 1.75, 1.75) segments:simd_make_uint3(1, 1, 1) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
         self.mesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AARenderer.device error:&error];
         if (error != nil) {
@@ -38,7 +38,7 @@
 }
 
 - (void)render:(id<MTLRenderCommandEncoder>)encoder  Uniforms:(Uniforms)uniform {
-    
+    uniform.modelMatrix = self.modelMatrix;
     [encoder setVertexBytes:&uniform length:sizeof(uniform) atIndex:1];
     [encoder setFragmentTexture:self.texture atIndex:1];
     

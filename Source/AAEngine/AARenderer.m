@@ -15,9 +15,13 @@ NSString *shader = @"\
 using namespace metal;\
 struct VertexIn {\
   float4 position [[attribute(0)]];\
+  float3 normal [[attribute(1)]];\
+  float2 uv [[attribute(2)]];\
 };\
 struct VertexOut {\
     float4 position [[position]];\
+    float2 uv;\
+    float3 color;\
 };\
 struct Uniforms {\
     float4x4 modelMatrix;\
@@ -28,11 +32,12 @@ vertex VertexOut vertex_main(const VertexIn in [[stage_in]], constant Uniforms &
     float4 pos = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * in.position;\
     VertexOut out;\
     out.position = pos;\
+    out.uv = in.uv;\
     return out;\
 }\
-fragment float4 fragment_main(texture2d<float> baseColorTexture [[texture(1)]]) {\
+fragment float4 fragment_main(VertexOut in [[stage_in]],texture2d<float> baseColorTexture [[texture(1)]]) {\
     constexpr sampler textureSampler(filter::linear, mip_filter::linear, max_anisotropy(8), address::repeat);\
-    float3 baseColor = baseColorTexture.sample(textureSampler, 1).rgb;\
+    float3 baseColor = baseColorTexture.sample(textureSampler, in.uv*1).rgb;\
     return float4(baseColor, 1);\
 }\
 ";
@@ -72,6 +77,14 @@ static id<MTLLibrary> m_library;
         vertexDescriptor.attributes[0].format = MTLVertexFormatFloat3;
         vertexDescriptor.attributes[0].offset = 0;
         vertexDescriptor.attributes[0].bufferIndex = 0;
+        vertexDescriptor.attributes[1].format = MTLVertexFormatFloat3;
+        vertexDescriptor.attributes[1].offset = 12;
+        vertexDescriptor.attributes[1].bufferIndex = 0;
+        vertexDescriptor.attributes[2].format = MTLVertexFormatFloat2;
+        vertexDescriptor.attributes[2].offset = 24;
+        vertexDescriptor.attributes[2].bufferIndex = 0;
+        
+        
         vertexDescriptor.layouts[0].stride = sizeof(float) * 8;  // pos nor uv
         pipelineStateDescriptor.vertexDescriptor = vertexDescriptor;
         self.pipelineState = [self.mtkView.device newRenderPipelineStateWithDescriptor:pipelineStateDescriptor error:&error];

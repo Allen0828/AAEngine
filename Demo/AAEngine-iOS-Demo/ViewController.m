@@ -14,9 +14,13 @@
 #import "AARenderer.h"
 #import "AAPanoramaScene.h"
 #import <MetalKit/MetalKit.h>
+#import "AAInputSystem.h"
+
 
 @interface ViewController () <MTKViewDelegate>
-
+{
+    CGPoint lastLocation;
+}
 
 @property (strong) MTKView *mtkView;
 @property (strong) AARenderer *renderer;
@@ -36,7 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mtkView = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 375, 375)];
+    self.mtkView = [[MTKView alloc] initWithFrame:self.view.frame];
     self.mtkView.device = MTLCreateSystemDefaultDevice();
     self.mtkView.delegate = self;
     self.mtkView.clearColor = MTLClearColorMake(0, 0, 0, 1);
@@ -44,9 +48,11 @@
     
     
     
-    self.renderer = [[AARenderer alloc] initWith:self.mtkView]; //dalihua2
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"plane" ofType:@"png"];
-    [self.renderer loadPanoramaScene:[[AAPanoramaScene alloc]initWithImageName:path]];
+    self.renderer = [[AARenderer alloc] initWith:self.mtkView]; //dalihua2 plane
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"panorama_3" ofType:@"jpg"];
+    AAPanoramaScene *scene = [[AAPanoramaScene alloc]initWithImageName:path];
+    scene.camera.aspect = self.view.frame.size.width / self.view.frame.size.height;
+    [self.renderer loadPanoramaScene:scene];
 
 //    minDistance = 0.0;
 //    maxDistance = 20;
@@ -77,18 +83,21 @@
 //}
 //
 //
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    CGPoint location = [[touches anyObject] locationInView:self.view];
-//    lastLocation = location;
-//}
-//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    CGPoint location = [[touches anyObject] locationInView:self.view];
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGPoint location = [[touches anyObject] locationInView:self.view];
+    lastLocation = location;
+}
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGPoint location = [[touches anyObject] locationInView:self.view];
+    AAInputSystem *input = [AAInputSystem shared];
+//    input.mouseScroll = CGPointMake(location.x - lastLocation.x, location.y - lastLocation.y);
+    input.mouseDelta = CGPointMake(location.x - lastLocation.x, location.y - lastLocation.y);
 //    [self sceneMove:location.x - lastLocation.x deltaY:location.y - lastLocation.y];
-//    lastLocation = location;
-//}
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    
-//}
+    lastLocation = location;
+}
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
 //
 //
 //- (void)sceneScroll:(CGFloat)x deltaY:(CGFloat)y {

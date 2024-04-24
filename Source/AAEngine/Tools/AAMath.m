@@ -7,6 +7,11 @@
 
 #import "AAMath.h"
 
+simd_float4x4 Translation_float4x4(simd_float3 pos) {
+    return translation(pos.x, pos.y, pos.z);
+}
+
+
 simd_float4x4 translation(float x, float y, float z) {
     return (simd_float4x4){
         .columns[0] = {1, 0, 0, 0},
@@ -15,6 +20,15 @@ simd_float4x4 translation(float x, float y, float z) {
         .columns[3] = {x, y, z, 1}
     };
 }
+
+simd_float4x4 Rotation_float4x4(simd_float3 rot) {
+    return rotation(rot.x, rot.y, rot.z);
+}
+
+simd_float4x4 Scale_float4x4(simd_float3 scale) {
+    return scaling(scale.x, scale.y, scale.z);
+}
+
 simd_float4x4 scaling(float x, float y, float z) {
     return (simd_float4x4){
         .columns[0] = {x, 0, 0, 0},
