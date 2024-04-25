@@ -27,7 +27,8 @@
         self.fov = degreesToRadians(70);
         self.near = 0.1;
         self.far = 500;
-        self.distance = 2.5;
+        self.distance = 1.5;
+        self.maxRotX = M_PI_2;
     }
     return self;
 }

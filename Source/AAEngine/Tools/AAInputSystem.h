@@ -5,14 +5,27 @@
 //  Created by allen on 2024/4/23.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+typedef enum {
+    Begin,
+    Move,
+    End
+} MoveType;
 
 @interface AAInputSystem : NSObject
 
-@property (nonatomic,assign) CGPoint mouseDelta;
-@property (nonatomic,assign) CGPoint mouseScroll;
+@property (nonatomic,assign,readonly) CGPoint touchMove;
+@property (nonatomic,assign,readonly) CGPoint scrollMove;
 
-+ (id)shared;
+@property (nonatomic,assign) MoveType type;
+
+
++ (instancetype)shared;
+
+- (void)setCursor:(CGFloat)x Y:(CGFloat)y;
+- (void)setScroll:(CGFloat)scroll;
+
 
 @end
 

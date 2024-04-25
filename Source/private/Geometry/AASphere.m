@@ -21,20 +21,23 @@
 
 - (instancetype)initWithStacks:(int)stacks slices:(int)slices radius:(float)radius {
     if (self = [super init]) {
-        unsigned int x = stacks;
-        unsigned int y = slices;
-        NSError *error;
-        MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:MTLCreateSystemDefaultDevice()];
-        MDLMesh *mdlMesh = [[MDLMesh alloc] initSphereWithExtent:simd_make_float3(radius, radius, radius) segments:simd_make_uint2(x, y) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
-//        MDLMesh *mdlMesh = [[MDLMesh alloc] initBoxWithExtent:simd_make_float3(1.75, 1.75, 1.75) segments:simd_make_uint3(1, 1, 1) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
-        
-        self.mesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AARenderer.device error:&error];
-        if (error != nil) {
-            NSLog(@"model error");
-        }
+        [self create:stacks slices:slices radius:radius];
     }
     return self;
+}
+
+- (void)create:(int)stacks slices:(int)slices radius:(float)radius {
+    NSError *error;
+    MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:MTLCreateSystemDefaultDevice()];
+    MDLMesh *mdlMesh = [[MDLMesh alloc] initSphereWithExtent:simd_make_float3(radius, radius, radius) segments:simd_make_uint2(slices, radius) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
+    
+//        MDLMesh *mdlMesh = [[MDLMesh alloc] initBoxWithExtent:simd_make_float3(1.75, 1.75, 1.75) segments:simd_make_uint3(1, 1, 1) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
+    
+    self.mesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AARenderer.device error:&error];
+    if (error != nil) {
+        NSLog(@"model error");
+    }
 }
 
 - (void)render:(id<MTLRenderCommandEncoder>)encoder  Uniforms:(Uniforms)uniform {
@@ -64,5 +67,11 @@
     }
     self.texture = uv;
 }
+
+- (void)resize:(int)stacks slices:(int)slices radius:(float)radius {
+    [self create:stacks slices:slices radius:radius];
+}
+
+
 
 @end
