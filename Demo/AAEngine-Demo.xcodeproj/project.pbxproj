@@ -14,12 +14,6 @@
 		9F1326A72BB27DD90000E108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1326A62BB27DD90000E108 /* main.m */; };
 		9F6630BB2BD67C9E007DBAED /* dalihua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6630BA2BD67C9E007DBAED /* dalihua2.png */; };
 		9F6630BC2BD67C9E007DBAED /* dalihua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6630BA2BD67C9E007DBAED /* dalihua2.png */; };
-		9F6630C02BD75856007DBAED /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630BF2BD75856007DBAED /* AACamera.m */; };
-		9F6630C12BD75856007DBAED /* AACamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630BF2BD75856007DBAED /* AACamera.m */; };
-		9F6630C52BD75BA6007DBAED /* AATransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C42BD75BA6007DBAED /* AATransform.m */; };
-		9F6630C62BD75BA6007DBAED /* AATransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C42BD75BA6007DBAED /* AATransform.m */; };
-		9F6630C92BD762CB007DBAED /* AAInputSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C82BD762CB007DBAED /* AAInputSystem.m */; };
-		9F6630CA2BD762CB007DBAED /* AAInputSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630C82BD762CB007DBAED /* AAInputSystem.m */; };
 		9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F52BBD4FD500912FDB /* AppDelegate.m */; };
 		9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F82BBD4FD500912FDB /* SceneDelegate.m */; };
 		9F9032FC2BBD4FD500912FDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032FB2BBD4FD500912FDB /* ViewController.m */; };
@@ -43,14 +37,7 @@
 		9FA7176B2BD9F3C800101E1F /* panorama_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717692BD9F3C700101E1F /* panorama_2.jpg */; };
 		9FA717712BDA708F00101E1F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717702BDA708F00101E1F /* lines.png */; };
 		9FA717722BDA708F00101E1F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717702BDA708F00101E1F /* lines.png */; };
-		9FCCC6622BD63E190030D066 /* AARenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC6612BD63E190030D066 /* AARenderer.m */; };
-		9FCCC6652BD63EAB0030D066 /* AAPanoramaScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC6642BD63EAB0030D066 /* AAPanoramaScene.m */; };
-		9FCCC6662BD63EAF0030D066 /* AAPanoramaScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC6642BD63EAB0030D066 /* AAPanoramaScene.m */; };
-		9FCCC6672BD63EB20030D066 /* AARenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC6612BD63E190030D066 /* AARenderer.m */; };
-		9FCCC66B2BD644340030D066 /* AAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC66A2BD644340030D066 /* AAMath.m */; };
-		9FCCC66F2BD6446D0030D066 /* AASphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC66E2BD6446D0030D066 /* AASphere.m */; };
-		9FCCC6702BD64C170030D066 /* AASphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC66E2BD6446D0030D066 /* AASphere.m */; };
-		9FCCC6712BD64C3A0030D066 /* AAMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCC66A2BD644340030D066 /* AAMath.m */; };
+		9FF072582BDCF2D400359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF072572BDCF2D400359AEA /* AAEngine */; };
 		9FF0A9152BCD065200E60D2F /* floorNormal-mipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */; };
 		9FF0A9162BCD065200E60D2F /* floorNormal-mipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */; };
 /* End PBXBuildFile section */
@@ -66,12 +53,6 @@
 		9F1326A62BB27DD90000E108 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F1326A82BB27DD90000E108 /* AAEngine_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AAEngine_Demo.entitlements; sourceTree = "<group>"; };
 		9F6630BA2BD67C9E007DBAED /* dalihua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dalihua2.png; sourceTree = "<group>"; };
-		9F6630BE2BD75856007DBAED /* AACamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACamera.h; sourceTree = "<group>"; };
-		9F6630BF2BD75856007DBAED /* AACamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AACamera.m; sourceTree = "<group>"; };
-		9F6630C32BD75BA6007DBAED /* AATransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AATransform.h; sourceTree = "<group>"; };
-		9F6630C42BD75BA6007DBAED /* AATransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AATransform.m; sourceTree = "<group>"; };
-		9F6630C72BD762CB007DBAED /* AAInputSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAInputSystem.h; sourceTree = "<group>"; };
-		9F6630C82BD762CB007DBAED /* AAInputSystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAInputSystem.m; sourceTree = "<group>"; };
 		9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AAEngine-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9032F42BBD4FD500912FDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F9032F52BBD4FD500912FDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,14 +74,6 @@
 		9FA717692BD9F3C700101E1F /* panorama_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama_2.jpg; sourceTree = "<group>"; };
 		9FA717702BDA708F00101E1F /* lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lines.png; sourceTree = "<group>"; };
 		9FAEEF162BCE8DB90041C26B /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		9FCCC6602BD63E190030D066 /* AARenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AARenderer.h; sourceTree = "<group>"; };
-		9FCCC6612BD63E190030D066 /* AARenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AARenderer.m; sourceTree = "<group>"; };
-		9FCCC6632BD63EAB0030D066 /* AAPanoramaScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPanoramaScene.h; sourceTree = "<group>"; };
-		9FCCC6642BD63EAB0030D066 /* AAPanoramaScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPanoramaScene.m; sourceTree = "<group>"; };
-		9FCCC6692BD644340030D066 /* AAMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAMath.h; sourceTree = "<group>"; };
-		9FCCC66A2BD644340030D066 /* AAMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAMath.m; sourceTree = "<group>"; };
-		9FCCC66D2BD6446D0030D066 /* AASphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AASphere.h; sourceTree = "<group>"; };
-		9FCCC66E2BD6446D0030D066 /* AASphere.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AASphere.m; sourceTree = "<group>"; };
 		9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floorNormal-mipmap.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF072582BDCF2D400359AEA /* AAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +99,6 @@
 		9F13268F2BB27DD70000E108 = {
 			isa = PBXGroup;
 			children = (
-				9F90331D2BBD530E00912FDB /* Source */,
 				9F9033122BBD515E00912FDB /* Resources */,
 				9F13269A2BB27DD70000E108 /* AAEngine-Demo */,
 				9F9032F32BBD4FD500912FDB /* AAEngine-iOS-Demo */,
@@ -156,22 +129,6 @@
 				9F1326A82BB27DD90000E108 /* AAEngine_Demo.entitlements */,
 			);
 			path = "AAEngine-Demo";
-			sourceTree = "<group>";
-		};
-		9F6630BD2BD75707007DBAED /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				9F6630BE2BD75856007DBAED /* AACamera.h */,
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
-		9F6630C22BD75B89007DBAED /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-				9F6630C32BD75BA6007DBAED /* AATransform.h */,
-			);
-			path = Basic;
 			sourceTree = "<group>";
 		};
 		9F9032F32BBD4FD500912FDB /* AAEngine-iOS-Demo */ = {
@@ -215,59 +172,6 @@
 			path = plane;
 			sourceTree = "<group>";
 		};
-		9F90331D2BBD530E00912FDB /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				9F90331E2BBD530E00912FDB /* AAEngine */,
-				9F9033252BBD530E00912FDB /* private */,
-			);
-			name = Source;
-			path = ../Source;
-			sourceTree = "<group>";
-		};
-		9F90331E2BBD530E00912FDB /* AAEngine */ = {
-			isa = PBXGroup;
-			children = (
-				9F6630C22BD75B89007DBAED /* Basic */,
-				9F6630BD2BD75707007DBAED /* Camera */,
-				9FCCC66C2BD644560030D066 /* Geometry */,
-				9FCCC6682BD644180030D066 /* Tools */,
-				9FCCC6602BD63E190030D066 /* AARenderer.h */,
-				9FCCC6612BD63E190030D066 /* AARenderer.m */,
-				9FCCC6632BD63EAB0030D066 /* AAPanoramaScene.h */,
-				9FCCC6642BD63EAB0030D066 /* AAPanoramaScene.m */,
-			);
-			path = AAEngine;
-			sourceTree = "<group>";
-		};
-		9F9033252BBD530E00912FDB /* private */ = {
-			isa = PBXGroup;
-			children = (
-				9FA7176F2BDA3D0400101E1F /* Basic */,
-				9FA7176E2BDA3CFB00101E1F /* Camera */,
-				9FA7176D2BDA3CF000101E1F /* Geometry */,
-				9F9033282BBD530E00912FDB /* Tools */,
-				9F90332A2BBD530E00912FDB /* Shaders */,
-			);
-			path = private;
-			sourceTree = "<group>";
-		};
-		9F9033282BBD530E00912FDB /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				9F6630C82BD762CB007DBAED /* AAInputSystem.m */,
-				9FCCC66A2BD644340030D066 /* AAMath.m */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		9F90332A2BBD530E00912FDB /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shaders;
-			sourceTree = "<group>";
-		};
 		9F90336A2BBFF88C00912FDB /* house */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,53 +182,12 @@
 			path = house;
 			sourceTree = "<group>";
 		};
-		9FA7176D2BDA3CF000101E1F /* Geometry */ = {
-			isa = PBXGroup;
-			children = (
-				9FCCC66E2BD6446D0030D066 /* AASphere.m */,
-			);
-			path = Geometry;
-			sourceTree = "<group>";
-		};
-		9FA7176E2BDA3CFB00101E1F /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				9F6630BF2BD75856007DBAED /* AACamera.m */,
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
-		9FA7176F2BDA3D0400101E1F /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-				9F6630C42BD75BA6007DBAED /* AATransform.m */,
-			);
-			path = Basic;
-			sourceTree = "<group>";
-		};
 		9FAEEF152BCE8DB90041C26B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9FAEEF162BCE8DB90041C26B /* MetalKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9FCCC6682BD644180030D066 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				9FCCC6692BD644340030D066 /* AAMath.h */,
-				9F6630C72BD762CB007DBAED /* AAInputSystem.h */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		9FCCC66C2BD644560030D066 /* Geometry */ = {
-			isa = PBXGroup;
-			children = (
-				9FCCC66D2BD6446D0030D066 /* AASphere.h */,
-			);
-			path = Geometry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +206,9 @@
 			dependencies = (
 			);
 			name = "AAEngine-Demo";
+			packageProductDependencies = (
+				9FF072572BDCF2D400359AEA /* AAEngine */,
+			);
 			productName = "AAEngine-Demo";
 			productReference = 9F1326982BB27DD70000E108 /* AAEngine-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -390,6 +256,8 @@
 				Base,
 			);
 			mainGroup = 9F13268F2BB27DD70000E108;
+			packageReferences = (
+			);
 			productRefGroup = 9F1326992BB27DD70000E108 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -447,16 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F6630C92BD762CB007DBAED /* AAInputSystem.m in Sources */,
-				9F6630C52BD75BA6007DBAED /* AATransform.m in Sources */,
-				9FCCC6622BD63E190030D066 /* AARenderer.m in Sources */,
 				9F1326A02BB27DD70000E108 /* ViewController.m in Sources */,
-				9FCCC66B2BD644340030D066 /* AAMath.m in Sources */,
 				9F1326A72BB27DD90000E108 /* main.m in Sources */,
-				9FCCC6652BD63EAB0030D066 /* AAPanoramaScene.m in Sources */,
 				9F13269D2BB27DD70000E108 /* AppDelegate.m in Sources */,
-				9FCCC66F2BD6446D0030D066 /* AASphere.m in Sources */,
-				9F6630C02BD75856007DBAED /* AACamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,16 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9032FC2BBD4FD500912FDB /* ViewController.m in Sources */,
-				9FCCC6672BD63EB20030D066 /* AARenderer.m in Sources */,
 				9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */,
 				9F9033072BBD4FD700912FDB /* main.m in Sources */,
-				9F6630C12BD75856007DBAED /* AACamera.m in Sources */,
-				9F6630CA2BD762CB007DBAED /* AAInputSystem.m in Sources */,
-				9FCCC6662BD63EAF0030D066 /* AAPanoramaScene.m in Sources */,
-				9FCCC6712BD64C3A0030D066 /* AAMath.m in Sources */,
 				9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */,
-				9FCCC6702BD64C170030D066 /* AASphere.m in Sources */,
-				9F6630C62BD75BA6007DBAED /* AATransform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +619,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FF072572BDCF2D400359AEA /* AAEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AAEngine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F1326902BB27DD70000E108 /* Project object */;
 }

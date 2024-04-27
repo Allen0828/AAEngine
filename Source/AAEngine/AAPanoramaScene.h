@@ -7,8 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
-#import "AACamera.h"
-#import "AASphere.h"
+#import "Camera/AACamera.h"
+#import "Geometry/AASphere.h"
 
 @interface AAPanoramaScene : NSObject
 
