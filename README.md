@@ -22,7 +22,7 @@ metal for iOS/MacOS
 
 - File > Swift Packages > Add Package Dependency
 - Add `https://github.com/Allen0828/AAEngine.git`
-- Select "Up to Next Major" with "0.0.3"
+- Select "Up to Next Major" with "0.0.5"
 
 #### CocoaPods
 
@@ -35,3 +35,7 @@ target 'MyApp' do
   pod 'AAEngine', '~> 0.0.3'
 end
 ```
+
+## 展示全景地图
+<view><img src="https://github.com/Allen0828/AAEngine/blob/main/images/img_01.jpg" width="400"></img><img src="https://github.com/Allen0828/AAEngine/blob/main/images/img_02.jpg" width="400"></img>
+</view>
