@@ -7,19 +7,19 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "AAEngine.h"
-#import "AAAssetManager.h"
-#import "AAScene.h"
+
+#import "AARenderer.h"
+#import "AAPanoramaScene.h"
+#import "AAInputSystem.h"
 #import "AACamera.h"
+#import "AAMath.h"
 
 @interface ViewController ()
 {
-    float minDistance;
-    float maxDistance;
-    float distance;
-    NSTimer* mainLoopTimer;
+    NSTimer *mainLoop;
 }
-@property (nonatomic,strong) AAEngine *engine;
+
+@property (strong) AARenderer *renderer;
 
 @end
 
@@ -27,29 +27,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    minDistance = 0.0;
-    maxDistance = 20;
-    distance = 2.5;
-    
-    
     CAMetalLayer *layer = [CAMetalLayer layer];
-    layer.frame = CGRectMake(0, 0, 300, 300);
-    layer.pixelFormat = MTLPixelFormatBGRA8Unorm_sRGB;
+    layer.frame = CGRectMake(0, 0, 600, 600);
     self.view.layer = layer;
-    self.engine = [AAEngine createWith:layer];
+    
+
+    self.renderer = [[AARenderer alloc] initWith:layer];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"panorama_1" ofType:@"jpg"];
+    AAPanoramaScene *scene = [[AAPanoramaScene alloc] init];
+    scene.cameraControl = true;
+    [scene setImageWithPath:path];
+    [self.renderer loadPanoramaScene:scene];
     
     
-    AAModel *model = [AAAssetManager loadAsset:[[NSBundle mainBundle] pathForResource:@"plane" ofType:@"obj"]];
-    AAScene *scene = [[AAScene alloc] init];
-    [scene addChild:model];
-    
-    [self.engine loadScene:scene];
     // ios use CADisplayLink
-    mainLoopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30) target:self selector:@selector(render) userInfo:nil repeats:YES];
+    mainLoop = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30) target:self selector:@selector(render) userInfo:nil repeats:YES];
 }
 
 - (void)render {
-    [self.engine renderer];
+    [self.renderer render];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -70,20 +66,20 @@
 }
 
 - (void)scrollWheel:(NSEvent *)event {
-    NSLog(@"%.2f -- %.2f", event.deltaX, event.deltaY);
-    [self sceneScroll:event.deltaX deltaY:event.deltaY];
+    // 缩放 方式1
+//    [self sceneScroll:event.deltaX deltaY:event.deltaY];
+    // 方式2
+    [AAInputSystem.shared setScrollX:event.deltaX Y:event.deltaY];
 }
 - (void)mouseDragged:(NSEvent *)event {
-    NSLog(@"%.2f -- %.2f", event.deltaX, event.deltaY);
-    [self sceneMove:event.deltaX deltaY:event.deltaY];
+    // 点击 方式1
+//    [self sceneMove:event.deltaX deltaY:event.deltaY];
+    // 方式2
+    [AAInputSystem.shared setCursorX:event.deltaX Y:event.deltaY];
 }
-- (void)mouseDown:(NSEvent *)event {
-//    InputController *input = [InputController shareInstance];
-//    input->leftMouseDown = true;
-}
+
 - (void)mouseUp:(NSEvent *)event {
-//    InputController *input = [InputController shareInstance];
-//    input->leftMouseDown = false;
+    AAInputSystem.shared.type = End;
 }
 
 - (void)keyDown:(NSEvent*)event {
@@ -108,30 +104,45 @@
 }
 
 - (void)sceneScroll:(CGFloat)x deltaY:(CGFloat)y {
+    AACamera *c = [self.renderer getCurrentPanoramaScene].camera;
+    float distance = c.distance;
     distance -= (x + y) * 0.1;
-    distance = MIN(maxDistance, distance);
-    distance = MAX(minDistance, distance);
+//    distance = MIN(maxDistance, distance);
+//    distance = MAX(minDistance, distance);
     
-    simd_float3 rot = [self.engine getCurrentScene].camera.rot;
+    simd_float3 rot = c.rotation;
     simd_float4x4 rotateMatrix = rotationYXZ(-rot.x, rot.y, 0);
     simd_float4 distanceVector = simd_make_float4(0, 0, -distance, 0);
     simd_float4 rotatedVector = matrix_multiply(rotateMatrix, distanceVector);
 
-    [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
+    c.position = rotatedVector.xyz;
+    c.distance = distance;
+//    [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
 }
 
 - (void)sceneMove:(CGFloat)x deltaY:(CGFloat)y {
-    simd_float3 rot = [self.engine getCurrentScene].camera.rot;
-    rot.x += x * 0.01;
-    rot.y += y * 0.01;
+    AACamera *c = [self.renderer getCurrentPanoramaScene].camera;
+    simd_float3 rot = c.rotation;
+    rot.x += y * 0.01;
+    rot.y += x * 0.01;
     rot.x = MAX(-M_PI/2.0, MIN(rot.x, M_PI/2.0));
-    [self.engine getCurrentScene].camera.rot = rot;
-    
+    c.rotation = rot;
+//    [self.engine getCurrentScene].camera.rot = rot;
+//    
     simd_float4x4 rotateMatrix = rotationYXZ(-rot.x, rot.y, 0);
-    simd_float4 distanceVector = simd_make_float4(0, 0, -distance, 0);
+    simd_float4 distanceVector = simd_make_float4(0, 0, -c.distance, 0);
     simd_float4 rotatedVector = matrix_multiply(rotateMatrix, distanceVector);
-    
-    [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
+    c.position = rotatedVector.xyz;
+//    [self.engine getCurrentScene].camera.pos = rotatedVector.xyz;
+}
+
+- (float)getVertexX:(float)x {
+    float ratioX = 1.0 / self.view.frame.size.width;
+    return (2.0 *  x * ratioX) - 1.0;
+}
+- (float)getVertexY:(float)y {
+    float ratioY = 1.0 / self.view.frame.size.height;
+    return (2.0 * -y * ratioY) + 1.0;
 }
 
 @end
