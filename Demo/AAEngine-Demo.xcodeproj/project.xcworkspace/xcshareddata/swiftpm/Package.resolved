@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "aaengine",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Allen0828/AAEngine",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e7e1f791bb5be566ac63e45760c083c792b2f16f"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -38,6 +38,8 @@
 		9FA717712BDA708F00101E1F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717702BDA708F00101E1F /* lines.png */; };
 		9FA717722BDA708F00101E1F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717702BDA708F00101E1F /* lines.png */; };
 		9FF072582BDCF2D400359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF072572BDCF2D400359AEA /* AAEngine */; };
+		9FF0725E2BDCF4F100359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF0725D2BDCF4F100359AEA /* AAEngine */; };
+		9FF072632BDCF66D00359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF072622BDCF66D00359AEA /* AAEngine */; };
 		9FF0A9152BCD065200E60D2F /* floorNormal-mipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */; };
 		9FF0A9162BCD065200E60D2F /* floorNormal-mipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0725E2BDCF4F100359AEA /* AAEngine in Frameworks */,
 				9FF072582BDCF2D400359AEA /* AAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF072632BDCF66D00359AEA /* AAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +212,7 @@
 			name = "AAEngine-Demo";
 			packageProductDependencies = (
 				9FF072572BDCF2D400359AEA /* AAEngine */,
+				9FF0725D2BDCF4F100359AEA /* AAEngine */,
 			);
 			productName = "AAEngine-Demo";
 			productReference = 9F1326982BB27DD70000E108 /* AAEngine-Demo.app */;
@@ -226,6 +231,9 @@
 			dependencies = (
 			);
 			name = "AAEngine-iOS-Demo";
+			packageProductDependencies = (
+				9FF072622BDCF66D00359AEA /* AAEngine */,
+			);
 			productName = "AAEngine-iOS-Demo";
 			productReference = 9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +265,7 @@
 			);
 			mainGroup = 9F13268F2BB27DD70000E108;
 			packageReferences = (
+				9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */,
 			);
 			productRefGroup = 9F1326992BB27DD70000E108 /* Products */;
 			projectDirPath = "";
@@ -620,9 +629,30 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Allen0828/AAEngine";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		9FF072572BDCF2D400359AEA /* AAEngine */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = AAEngine;
+		};
+		9FF0725D2BDCF4F100359AEA /* AAEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */;
+			productName = AAEngine;
+		};
+		9FF072622BDCF66D00359AEA /* AAEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */;
 			productName = AAEngine;
 		};
 /* End XCSwiftPackageProductDependency section */

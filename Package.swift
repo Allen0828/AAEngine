@@ -19,7 +19,7 @@ let package = Package(
             name: "AAEngine",
             path: "Source",
             resources:[
-//                .process("private/Shaders"),
+                .process("private/Shaders"),
             ],
             publicHeadersPath: "AAEngine",
             cSettings: [

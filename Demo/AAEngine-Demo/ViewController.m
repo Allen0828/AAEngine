@@ -8,11 +8,11 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-#import "AARenderer.h"
-#import "AAPanoramaScene.h"
-#import "AAInputSystem.h"
-#import "AACamera.h"
-#import "AAMath.h"
+#import <AARenderer.h>
+#import <AAPanoramaScene.h>
+#import <Tools/AAInputSystem.h>
+#import <Camera/AACamera.h>
+
 
 @interface ViewController ()
 {

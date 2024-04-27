@@ -8,9 +8,10 @@
 #import "ViewController.h"
 #import <MetalKit/MetalKit.h>
 
-#import "AARenderer.h"
-#import "AAPanoramaScene.h"
-#import "AAInputSystem.h"
+#import <AARenderer.h>
+#import <AAPanoramaScene.h>
+#import <Tools/AAInputSystem.h>
+
 
 
 @interface ViewController () <MTKViewDelegate>
