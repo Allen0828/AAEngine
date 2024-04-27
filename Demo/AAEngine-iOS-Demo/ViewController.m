@@ -6,14 +6,10 @@
 //
 
 #import "ViewController.h"
-//#import "AAEngine.h"
-//#import "AAAssetManager.h"
-//#import "AAScene.h"
-//#import "AACamera.h"
+#import <MetalKit/MetalKit.h>
 
 #import "AARenderer.h"
 #import "AAPanoramaScene.h"
-#import <MetalKit/MetalKit.h>
 #import "AAInputSystem.h"
 
 
@@ -46,8 +42,8 @@
     
     
     
-    self.renderer = [[AARenderer alloc] initWith:self.mtkView]; //dalihua2 plane
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"lines" ofType:@"png"];
+    self.renderer = [[AARenderer alloc] initWithMTKView:self.mtkView]; //dalihua2 plane
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"panorama_1" ofType:@"jpg"];
     AAPanoramaScene *scene = [[AAPanoramaScene alloc] init];
     [scene setImageWithPath:path];
     scene.camera.aspect = self.view.frame.size.width / self.view.frame.size.height;
@@ -75,12 +71,22 @@
             
         case UIGestureRecognizerStateChanged:
             AAInputSystem.shared.type = Move;
-            [AAInputSystem.shared setCursor:translation.x Y:translation.y];
+            [AAInputSystem.shared setCursorX:translation.x Y:translation.y];
             break;
             
-        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateEnded: {
             AAInputSystem.shared.type = End;
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"panorama_2" ofType:@"jpg"];
+//            AAPanoramaScene *scene = [self.renderer getCurrentPanoramaScene];
+//            [scene setImageWithPath:path];
+            
+//            AAPanoramaScene *scene = [[AAPanoramaScene alloc] init];
+//            [scene setImageWithPath:path];
+//            [self.renderer loadPanoramaScene:scene];
+            
             break;
+        }
+            
             
         default:
             break;
@@ -95,10 +101,13 @@
             break;
             
         case UIGestureRecognizerStateChanged: {
-            [AAInputSystem.shared setScroll:gestureRecognizer.scale];
+            [AAInputSystem.shared setScrollX:gestureRecognizer.scale Y:gestureRecognizer.scale];
             break;
         }
         case UIGestureRecognizerStateEnded:
+            AAInputSystem.shared.type = End;
+            break;
+        case UIGestureRecognizerStateCancelled:
             AAInputSystem.shared.type = End;
             break;
             

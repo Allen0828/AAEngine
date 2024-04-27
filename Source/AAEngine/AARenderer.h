@@ -10,16 +10,24 @@
 
 @class AAPanoramaScene;
 @class MTKView;
+@class CAMetalLayer;
 
 @interface AARenderer : NSObject
 
 + (id<MTLDevice>)device;
 + (id<MTLCommandQueue>)commandQueue;
 + (id<MTLLibrary>)library;
++ (MTLPixelFormat)pixelFormat;
 
-- (instancetype)initWith:(MTKView*)mtkView;
-- (void)loadPanoramaScene:(AAPanoramaScene*)scene;
+
+- (instancetype)initWith:(CAMetalLayer*)layer;
+- (instancetype)initWithMTKView:(MTKView*)mtkView;
+- (void)setClearColorWithR:(double)red G:(double)green B:(double)blue A:(double)alpha;
 - (void)render;
+
+/// 展示全景地图
+- (void)loadPanoramaScene:(AAPanoramaScene*)scene;
+- (AAPanoramaScene*)getCurrentPanoramaScene;
 
 
 @end

@@ -29,13 +29,13 @@
     if (self=[super init]) {
         
         _camera = [[AACamera alloc] init];
-        _camera.position = simd_make_float3(0.0, 5.0, -1);
+        _camera.position = simd_make_float3(0.0, 0.0, -1.0);
         _camera.rotation = simd_make_float3(0, 0.0, 0.0);
         
         self.cameraControl = true;
         
-        _sphere = [[AASphere alloc] initWithStacks:48 slices:48 radius:2.0];
-        _sphere.rotation = simd_make_float3(degreesToRadians(180), 0, 0);
+        _sphere = [[AASphere alloc] initWithStacks:80 slices:80 radius:2.0];
+//        _sphere.rotation = simd_make_float3(degreesToRadians(180), 0, 0);
     }
     return self;
 }
@@ -62,7 +62,7 @@
     AAInputSystem *input = [AAInputSystem shared];
     
     if (!CGPointEqualToPoint(input.scrollMove, CGPointZero)) {
-        self.camera.distance -= (input.scrollMove.x + input.scrollMove.y);
+        self.camera.distance -= (input.scrollMove.x + input.scrollMove.y) * 0.1;
         
         simd_float4x4 rotateMatrix = rotationYXZ(-self.camera.rotation.x, self.camera.rotation.y, 0);
         

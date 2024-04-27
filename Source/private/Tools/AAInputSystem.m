@@ -6,15 +6,18 @@
 //
 
 #import "AAInputSystem.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface AAInputSystem ()
 
 @property (nonatomic,assign) CGFloat cursor_x;
 @property (nonatomic,assign) CGFloat cursor_y;
 @property (nonatomic,assign) CGPoint previousTranslation;
-@property (nonatomic,assign) CGFloat previousScroll;
-@property (nonatomic,assign) CGFloat scroll_x;
 
+
+@property (nonatomic,assign) CGFloat scroll_x;
+@property (nonatomic,assign) CGFloat scroll_y;
+@property (nonatomic,assign) CGPoint previousScroll;
 
 @end
 
@@ -32,7 +35,7 @@ static id _instance = nil;
 
 - (instancetype)init {
     if (self=[super init]) {
-        self.previousScroll = 1.0;
+        self.previousScroll = CGPointMake(1.0, 1.0);
     }
     return self;
 }
@@ -42,28 +45,40 @@ static id _instance = nil;
     return move;
 }
 - (CGPoint)scrollMove {
-    return CGPointMake(self.scroll_x, 0.0);;
+    CGPoint scroll = CGPointMake(self.scroll_x, self.scroll_y);
+    
+    return scroll;
 }
 
-- (void)setCursor:(CGFloat)x Y:(CGFloat)y {
+- (void)setCursorX:(CGFloat)x Y:(CGFloat)y {
+#if TARGET_OS_IPHONE
     self.cursor_x = x - self.previousTranslation.x;
     self.cursor_y = y - self.previousTranslation.y;
+#else
+    self.cursor_x = x;
+    self.cursor_y = y;
+#endif
     self.previousTranslation = CGPointMake(x, y);
 }
 
-- (void)setScroll:(CGFloat)scroll {
-    CGFloat change = scroll - self.previousScroll;
-    self.scroll_x = change * 0.1;
-    self.previousScroll = scroll;
+- (void)setScrollX:(CGFloat)x Y:(CGFloat)y {
+#if TARGET_OS_IPHONE
+    self.scroll_x = x - self.previousScroll.x;
+    self.scroll_y = y - self.previousScroll.y;
+#else
+    self.scroll_x = x;
+    self.scroll_y = y;
+#endif
+    self.previousScroll = CGPointMake(x, y);
 }
 
 - (void)setType:(MoveType)type {
     _type = type;
     if (type == End) {
         self.previousTranslation = CGPointZero;
+        self.previousScroll = CGPointMake(1.0, 1.0);
         self.cursor_x = 0;
         self.cursor_y = 0;
-        self.previousScroll = 1.0;
     }
 }
 

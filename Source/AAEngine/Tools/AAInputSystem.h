@@ -5,7 +5,7 @@
 //  Created by allen on 2024/4/23.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 typedef enum {
     Begin,
@@ -23,8 +23,8 @@ typedef enum {
 
 + (instancetype)shared;
 
-- (void)setCursor:(CGFloat)x Y:(CGFloat)y;
-- (void)setScroll:(CGFloat)scroll;
+- (void)setCursorX:(CGFloat)x Y:(CGFloat)y;
+- (void)setScrollX:(CGFloat)x Y:(CGFloat)y;
 
 
 @end

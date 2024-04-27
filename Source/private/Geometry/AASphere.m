@@ -30,7 +30,7 @@
 - (void)create:(int)stacks slices:(int)slices radius:(float)radius {
     NSError *error;
     MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:MTLCreateSystemDefaultDevice()];
-    MDLMesh *mdlMesh = [[MDLMesh alloc] initSphereWithExtent:simd_make_float3(radius, radius, radius) segments:simd_make_uint2(slices, radius) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
+    MDLMesh *mdlMesh = [[MDLMesh alloc] initSphereWithExtent:simd_make_float3(radius, radius, radius) segments:simd_make_uint2(stacks, slices) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
     
 //        MDLMesh *mdlMesh = [[MDLMesh alloc] initBoxWithExtent:simd_make_float3(1.75, 1.75, 1.75) segments:simd_make_uint3(1, 1, 1) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
     
@@ -60,9 +60,16 @@
     NSError *error;
     MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:AARenderer.device];
     NSURL *URL = [NSURL fileURLWithPath:filePath];
-    id<MTLTexture> uv = [textureLoader newTextureWithContentsOfURL:URL options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
+    
+    NSDictionary *options = @{
+        MTKTextureLoaderOptionTextureUsage : @(MTLTextureUsageShaderRead),
+        MTKTextureLoaderOptionTextureStorageMode : @(MTLStorageModePrivate),
+        MTKTextureLoaderOptionSRGB : @(NO),
+        MTKTextureLoaderOptionGenerateMipmaps: @(NO)
+    };
+    id<MTLTexture> uv = [textureLoader newTextureWithContentsOfURL:URL options:options error:&error];
     if(error || uv == nil) {
-        NSLog(@"Error creating texture %@", error.localizedDescription);
+        NSLog(@"Error creating texture %@", error);
         return;
     }
     self.texture = uv;
