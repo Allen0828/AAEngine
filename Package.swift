@@ -29,6 +29,7 @@ let package = Package(
                 .headerSearchPath("AAEngine/Camera"),
                 .headerSearchPath("AAEngine/Geometry"),
                 .headerSearchPath("AAEngine/Tools"),
+                .headerSearchPath("AAEngine/Components"),
             ]
         ),
     ]

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0A5B232BE3A73F0059E510 /* IMG_4577.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F0A5B222BE3A73F0059E510 /* IMG_4577.jpg */; };
+		9F0A5B242BE3A73F0059E510 /* IMG_4577.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F0A5B222BE3A73F0059E510 /* IMG_4577.jpg */; };
 		9F13269D2BB27DD70000E108 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F13269C2BB27DD70000E108 /* AppDelegate.m */; };
 		9F1326A02BB27DD70000E108 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F13269F2BB27DD70000E108 /* ViewController.m */; };
 		9F1326A22BB27DD90000E108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1326A12BB27DD90000E108 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		9F1326A72BB27DD90000E108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1326A62BB27DD90000E108 /* main.m */; };
 		9F6630BB2BD67C9E007DBAED /* dalihua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6630BA2BD67C9E007DBAED /* dalihua2.png */; };
 		9F6630BC2BD67C9E007DBAED /* dalihua2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6630BA2BD67C9E007DBAED /* dalihua2.png */; };
+		9F79DA0D2BEF64BA00BF4385 /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9F79DA0C2BEF64BA00BF4385 /* AAEngine */; };
 		9F9032F62BBD4FD500912FDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F52BBD4FD500912FDB /* AppDelegate.m */; };
 		9F9032F92BBD4FD500912FDB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032F82BBD4FD500912FDB /* SceneDelegate.m */; };
 		9F9032FC2BBD4FD500912FDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9032FB2BBD4FD500912FDB /* ViewController.m */; };
@@ -38,13 +41,12 @@
 		9FA717712BDA708F00101E1F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717702BDA708F00101E1F /* lines.png */; };
 		9FA717722BDA708F00101E1F /* lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FA717702BDA708F00101E1F /* lines.png */; };
 		9FF072582BDCF2D400359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF072572BDCF2D400359AEA /* AAEngine */; };
-		9FF0725E2BDCF4F100359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF0725D2BDCF4F100359AEA /* AAEngine */; };
-		9FF072632BDCF66D00359AEA /* AAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF072622BDCF66D00359AEA /* AAEngine */; };
 		9FF0A9152BCD065200E60D2F /* floorNormal-mipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */; };
 		9FF0A9162BCD065200E60D2F /* floorNormal-mipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0A9142BCD065200E60D2F /* floorNormal-mipmap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F0A5B222BE3A73F0059E510 /* IMG_4577.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4577.jpg; sourceTree = "<group>"; };
 		9F1326982BB27DD70000E108 /* AAEngine-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AAEngine-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13269B2BB27DD70000E108 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F13269C2BB27DD70000E108 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF0725E2BDCF4F100359AEA /* AAEngine in Frameworks */,
 				9FF072582BDCF2D400359AEA /* AAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF072632BDCF66D00359AEA /* AAEngine in Frameworks */,
+				9F79DA0D2BEF64BA00BF4385 /* AAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +157,7 @@
 		9F9033122BBD515E00912FDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F0A5B222BE3A73F0059E510 /* IMG_4577.jpg */,
 				9FA717702BDA708F00101E1F /* lines.png */,
 				9FA717692BD9F3C700101E1F /* panorama_2.jpg */,
 				9FA717662BD9F15F00101E1F /* panorama_1.jpg */,
@@ -212,7 +214,6 @@
 			name = "AAEngine-Demo";
 			packageProductDependencies = (
 				9FF072572BDCF2D400359AEA /* AAEngine */,
-				9FF0725D2BDCF4F100359AEA /* AAEngine */,
 			);
 			productName = "AAEngine-Demo";
 			productReference = 9F1326982BB27DD70000E108 /* AAEngine-Demo.app */;
@@ -232,7 +233,7 @@
 			);
 			name = "AAEngine-iOS-Demo";
 			packageProductDependencies = (
-				9FF072622BDCF66D00359AEA /* AAEngine */,
+				9F79DA0C2BEF64BA00BF4385 /* AAEngine */,
 			);
 			productName = "AAEngine-iOS-Demo";
 			productReference = 9F9032F22BBD4FD500912FDB /* AAEngine-iOS-Demo.app */;
@@ -265,7 +266,7 @@
 			);
 			mainGroup = 9F13268F2BB27DD70000E108;
 			packageReferences = (
-				9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */,
+				9F79DA0B2BEF64BA00BF4385 /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = 9F1326992BB27DD70000E108 /* Products */;
 			projectDirPath = "";
@@ -293,6 +294,7 @@
 				9FA7176A2BD9F3C800101E1F /* panorama_2.jpg in Resources */,
 				9F90336E2BBFF88C00912FDB /* house.obj in Resources */,
 				9F9033172BBD515E00912FDB /* plane.png in Resources */,
+				9F0A5B232BE3A73F0059E510 /* IMG_4577.jpg in Resources */,
 				9FA717712BDA708F00101E1F /* lines.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +307,7 @@
 				9FF0A9162BCD065200E60D2F /* floorNormal-mipmap.png in Resources */,
 				9F9033732BBFF88C00912FDB /* house.mtl in Resources */,
 				9F6630BC2BD67C9E007DBAED /* dalihua2.png in Resources */,
+				9F0A5B242BE3A73F0059E510 /* IMG_4577.jpg in Resources */,
 				9F9033042BBD4FD700912FDB /* LaunchScreen.storyboard in Resources */,
 				9F90331C2BBD515E00912FDB /* plane.mtl in Resources */,
 				9F90331A2BBD515E00912FDB /* plane.obj in Resources */,
@@ -629,30 +632,20 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Allen0828/AAEngine";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		9F79DA0B2BEF64BA00BF4385 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9F79DA0C2BEF64BA00BF4385 /* AAEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AAEngine;
+		};
 		9FF072572BDCF2D400359AEA /* AAEngine */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AAEngine;
-		};
-		9FF0725D2BDCF4F100359AEA /* AAEngine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */;
-			productName = AAEngine;
-		};
-		9FF072622BDCF66D00359AEA /* AAEngine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9FF0725C2BDCF4F100359AEA /* XCRemoteSwiftPackageReference "AAEngine" */;
 			productName = AAEngine;
 		};
 /* End XCSwiftPackageProductDependency section */

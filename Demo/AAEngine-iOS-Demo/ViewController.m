@@ -9,8 +9,8 @@
 #import <MetalKit/MetalKit.h>
 
 #import <AARenderer.h>
-#import <AAPanoramaScene.h>
 #import <Tools/AAInputSystem.h>
+#import <Components/AAPanoramaScene.h>
 
 
 
@@ -41,14 +41,13 @@
     self.mtkView.clearColor = MTLClearColorMake(0, 0, 0, 1);
     [self.view addSubview:self.mtkView];
     
-    
-    
     self.renderer = [[AARenderer alloc] initWithMTKView:self.mtkView]; //dalihua2 plane
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"panorama_1" ofType:@"jpg"];
     AAPanoramaScene *scene = [[AAPanoramaScene alloc] init];
     [scene setImageWithPath:path];
     scene.camera.aspect = self.view.frame.size.width / self.view.frame.size.height;
-    [self.renderer loadPanoramaScene:scene];
+    [self.renderer loadScene:scene];
     
     
     UIPanGestureRecognizer *dragGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDragGesture:)];

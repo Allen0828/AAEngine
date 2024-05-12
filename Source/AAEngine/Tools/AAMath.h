@@ -11,6 +11,11 @@
 #include <Foundation/Foundation.h>
 #import <simd/simd.h>
 
+typedef struct {
+    matrix_float4x4 modelMatrix;
+    matrix_float4x4 viewMatrix;
+    matrix_float4x4 projectionMatrix;
+} Uniforms;
 
 #define radiansToDegrees(radians) ((radians / M_PI) * 180.0)
 #define degreesToRadians(degrees) ((degrees / 180.0) * M_PI)

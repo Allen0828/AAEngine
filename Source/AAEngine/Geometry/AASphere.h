@@ -8,12 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
 #import "Basic/AATransform.h"
+#import "Tools/AAMath.h"
 
-typedef struct {
-    matrix_float4x4 modelMatrix;
-    matrix_float4x4 viewMatrix;
-    matrix_float4x4 projectionMatrix;
-} Uniforms;
 
 @interface AASphere : AATransform
 

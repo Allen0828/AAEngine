@@ -6,41 +6,9 @@
 //
 
 #import "AARenderer.h"
-#import "AAPanoramaScene.h"
+//#import "AAPanoramaScene.h"
 #import <MetalKit/MetalKit.h>
-
-NSString *shader = @"\
-#include <metal_stdlib>\
-\n\
-using namespace metal;\
-struct VertexIn {\
-  float4 position [[attribute(0)]];\
-  float3 normal [[attribute(1)]];\
-  float2 uv [[attribute(2)]];\
-};\
-struct VertexOut {\
-    float4 position [[position]];\
-    float2 uv;\
-    float3 color;\
-};\
-struct Uniforms {\
-    float4x4 modelMatrix;\
-    float4x4 viewMatrix;\
-    float4x4 projectionMatrix;\
-};\
-vertex VertexOut vertex_main(const VertexIn in [[stage_in]], constant Uniforms &uniforms [[buffer(1)]]) {\
-    float4 pos = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * in.position;\
-    VertexOut out;\
-    out.position = pos;\
-    out.uv = in.uv;\
-    return out;\
-}\
-fragment float4 fragment_main(VertexOut in [[stage_in]],texture2d<float> baseColorTexture [[texture(1)]]) {\
-    constexpr sampler textureSampler(filter::linear, mip_filter::linear, max_anisotropy(8), address::repeat);\
-    float3 baseColor = baseColorTexture.sample(textureSampler, in.uv*1).rgb;\
-    return float4(baseColor, 1);\
-}\
-";
+#import "AAScene.h"
 
 static id<MTLDevice> m_device;
 static id<MTLCommandQueue> m_commandQueue;
@@ -53,22 +21,18 @@ static MTLPixelFormat m_pixelFormat;
 @property (nonatomic,weak) CAMetalLayer *m_layer;
 @property (nonatomic,strong) id <MTLRenderPipelineState> pipelineState;
 
-@property (nonatomic,strong) AAPanoramaScene *scene;
+@property (nonatomic,strong) AAScene *scene;
 @property (nonatomic,assign) MTLClearColor color;
+
+@property (nonatomic,strong) AAScene *game;
 
 @end
 
 @implementation AARenderer
 
 - (instancetype)initWith:(CAMetalLayer*)layer {
-    m_device = MTLCreateSystemDefaultDevice();
-    m_commandQueue = [m_device newCommandQueue];
-    NSError *error;
-    m_library = [m_device newLibraryWithSource:shader options:nil error:&error];
-    if (error) {
-        NSLog(@"初始化 metal library 失败-%@", error);
-    }
     if (self=[super init]) {
+        [self initMetalDevice];
         self.m_layer = layer;
         if (!self.m_layer.device) {
             self.m_layer.device = m_device;
@@ -102,6 +66,8 @@ static MTLPixelFormat m_pixelFormat;
         
         vertexDescriptor.layouts[0].stride = sizeof(float) * 8;  // pos nor uv
         pipelineStateDescriptor.vertexDescriptor = vertexDescriptor;
+        
+        NSError *error;
         self.pipelineState = [m_device newRenderPipelineStateWithDescriptor:pipelineStateDescriptor error:&error];
         if (error) {
             NSLog(@"pipelineState error %@", error);
@@ -111,15 +77,11 @@ static MTLPixelFormat m_pixelFormat;
 }
 
 - (instancetype)initWithMTKView:(MTKView*)mtkView {
-    m_device = MTLCreateSystemDefaultDevice();
-    m_commandQueue = [m_device newCommandQueue];
     if (self=[super init]) {
+        [self initMetalDevice];
         self.mtkView = mtkView;
-        NSError *error;
-        
-        id<MTLLibrary> defaultLibrary = [m_device newLibraryWithSource:shader options:nil error:&error];
-        id <MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:@"vertex_main"];
-        id <MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"fragment_main"];
+        id <MTLFunction> vertexFunction = [m_library newFunctionWithName:@"vertex_main"];
+        id <MTLFunction> fragmentFunction = [m_library newFunctionWithName:@"fragment_main"];
 
         MTLRenderPipelineDescriptor *pipelineStateDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
         pipelineStateDescriptor.vertexFunction = vertexFunction;
@@ -139,6 +101,8 @@ static MTLPixelFormat m_pixelFormat;
         
         vertexDescriptor.layouts[0].stride = sizeof(float) * 8;  // pos nor uv
         pipelineStateDescriptor.vertexDescriptor = vertexDescriptor;
+        
+        NSError *error;
         self.pipelineState = [self.mtkView.device newRenderPipelineStateWithDescriptor:pipelineStateDescriptor error:&error];
         if (error) {
             NSLog(@"pipelineState error %@", error);
@@ -147,10 +111,32 @@ static MTLPixelFormat m_pixelFormat;
     return self;
 }
 
-- (void)loadPanoramaScene:(AAPanoramaScene *)scene {
+- (void)initMetalDevice {
+    m_device = MTLCreateSystemDefaultDevice();
+    m_commandQueue = [m_device newCommandQueue];
+    NSError *error;
+#if TARGET_OS_IPHONE
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"AAEngine_AAEngine" ofType:@"bundle"];
+    if (file) {
+        NSBundle *bundle = [NSBundle bundleWithPath:file];
+        m_library = [m_device newDefaultLibraryWithBundle:bundle error:&error];
+    }
+    if (error) {
+        NSBundle *bundle = [NSBundle bundleForClass:[AARenderer class]];
+        m_library = [m_device newDefaultLibraryWithBundle:bundle error:&error];
+    }
+    if (error) {
+        NSLog(@"metal library load error ⚠️%@", error);
+    }
+#else
+    m_library = [m_device newDefaultLibrary];
+#endif
+}
+
+- (void)loadScene:(AAScene*)scene {
     self.scene = scene;
 }
-- (AAPanoramaScene*)getCurrentPanoramaScene {
+- (AAScene*)getCurrentScene {
     return self.scene;
 }
 
@@ -172,6 +158,7 @@ static MTLPixelFormat m_pixelFormat;
         [renderEncoder setRenderPipelineState:self.pipelineState];
         
         [self.scene render:renderEncoder];
+        [renderEncoder endEncoding];
         if (self.m_layer) {
             [commandBuffer presentDrawable:[self.m_layer nextDrawable]];
         } else {

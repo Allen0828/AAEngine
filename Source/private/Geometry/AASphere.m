@@ -53,7 +53,7 @@
     for (MTKSubmesh *submesh in self.mesh.submeshes) {
         [encoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle indexCount:submesh.indexCount indexType:submesh.indexType indexBuffer:submesh.indexBuffer.buffer indexBufferOffset:submesh.indexBuffer.offset];
     }
-    [encoder endEncoding];
+    
 }
 
 - (void)loadTextureWithPath:(NSString*)filePath {

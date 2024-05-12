@@ -8,9 +8,10 @@
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
 
-@class AAPanoramaScene;
 @class MTKView;
 @class CAMetalLayer;
+@class AAPanoramaScene;
+@class AAScene;
 
 @interface AARenderer : NSObject
 
@@ -25,9 +26,9 @@
 - (void)setClearColorWithR:(double)red G:(double)green B:(double)blue A:(double)alpha;
 - (void)render;
 
-/// 展示全景地图
-- (void)loadPanoramaScene:(AAPanoramaScene*)scene;
-- (AAPanoramaScene*)getCurrentPanoramaScene;
+/// 加载场景
+- (void)loadScene:(AAScene*)scene;
+- (AAScene*)getCurrentScene;
 
 
 @end

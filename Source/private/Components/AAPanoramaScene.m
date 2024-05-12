@@ -1,18 +1,21 @@
 //
-//  AAPanoramaScene.m
-//  AAEngine-Demo
+//  AAPScene.m
+//  
 //
-//  Created by allen on 2024/4/22.
+//  Created by Allen on 2024/5/12.
 //
 
 #import "AAPanoramaScene.h"
-#import <MetalKit/MetalKit.h>
-#import "AAMath.h"
-#import "AARenderer.h"
-#import "AACamera.h"
+#import <CoreGraphics/CoreGraphics.h>
 #import "AASphere.h"
 #import "AAInputSystem.h"
 
+typedef struct
+{
+    vector_float4 pos;
+    vector_float4 color;
+    vector_float2 coord;
+} VertexData;
 
 @interface AAPanoramaScene ()
 {
@@ -23,19 +26,11 @@
 
 @implementation AAPanoramaScene
 
-
-
 - (instancetype)init {
     if (self=[super init]) {
-        
-        _camera = [[AACamera alloc] init];
-        _camera.position = simd_make_float3(0.0, 0.0, -1.0);
-        _camera.rotation = simd_make_float3(0, 0.0, 0.0);
-        
         self.cameraControl = true;
         
         _sphere = [[AASphere alloc] initWithStacks:80 slices:80 radius:2.0];
-//        _sphere.rotation = simd_make_float3(degreesToRadians(180), 0, 0);
     }
     return self;
 }
@@ -44,16 +39,23 @@
     [self updateUniform];
     uniform.viewMatrix = self.camera.viewMatrix;
     uniform.projectionMatrix = self.camera.projectionMatrix;
-    
     [self.sphere render:encoder Uniforms:uniform];
     
+    const VertexData vert[] =
+    {
+        { { 0.0, 0.3, 0.0, 1.0 }, {1, 1, 1, 1 }, { 0, 0 } },
+        { {-0.3, 0.0, 0.0, 1.0 }, {1, 0, 1, 1 }, { 0, 0 } },
+        { { 0.3, 0.0, 0.0, 1.0 }, {1, 1, 0, 1 }, { 0, 0 } },
+    };
+    [encoder setVertexBytes:&uniform length:sizeof(uniform) atIndex:1];
+    [encoder setVertexBytes:vert length:sizeof(vert) atIndex:0];
+    [encoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
 }
 
 
 - (void)setImageWithPath:(NSString*)filePath {
     [self.sphere loadTextureWithPath:filePath];
 }
-
 
 - (void)updateUniform {
     if (!self.cameraControl)
@@ -90,7 +92,6 @@
         self.camera.rotation = rot;
     }
 }
-
 
 
 @end
